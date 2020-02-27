@@ -13,12 +13,12 @@ class ShopOwner extends Migration
      */
     public function up()
     {
-        Schema::create('shop_owner', function (Blueprint $table) {
+        Schema::create('shop_owners', function (Blueprint $table) {
             $table->integer('user_id');
-            $table->string('loc');
-            $table->string('shopname');
+            $table->string('location');
+            $table->string('shop_name');
     });
-     //
+    
     }
 
     /**
@@ -28,6 +28,7 @@ class ShopOwner extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('shop_owners');
+
     }
 }
