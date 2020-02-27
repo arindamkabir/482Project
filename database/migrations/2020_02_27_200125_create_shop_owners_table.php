@@ -14,6 +14,7 @@ class CreateShopOwnersTable extends Migration
     public function up()
     {
         Schema::create('shop_owners', function (Blueprint $table) {
+            $table->bigIncrements('shop_id');
             $table->integer('user_id');
             $table->string('location');
             $table->string('shop_name');
