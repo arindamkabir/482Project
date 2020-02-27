@@ -119,7 +119,7 @@
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+              <a href="#"><img class="card-img-top" src="{{asset('images/1.jpg')}}" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="#">Item One</a>
@@ -135,7 +135,7 @@
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+              <a href="#"><img class="card-img-top" src="{{asset('images/2.jpg')}}" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="#">Item Two</a>
@@ -151,7 +151,7 @@
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+              <a href="#"><img class="card-img-top" src="{{asset('images/3.jpg')}}" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="#">Item Three</a>
@@ -167,7 +167,7 @@
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+              <a href="#"><img class="card-img-top" src="{{asset('images/4.jpg')}}" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="#">Item Four</a>
@@ -183,7 +183,7 @@
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+              <a href="#"><img class="card-img-top" src="{{asset('images/5.jpg')}}" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="#">Item Five</a>
