@@ -16,7 +16,7 @@ class CustomersTableSeeder extends Seeder
     public function run()
     {
         DB::table('customers')->insert([
-            'user_id' => 4,
+            'user_id' => 1,
             'location' => 'Uttara',
         ]);
         
