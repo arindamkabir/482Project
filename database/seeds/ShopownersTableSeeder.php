@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
 
-class ShopownersTableSeeder extends Seeder
+class ShopOwnersTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,10 +14,10 @@ class ShopownersTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('shopowners')->insert([
-            'shop_id' => Int::random(10),
+        DB::table('shop_owners')->insert([
+            'user_id' => 3,
             'location' => 'Dhanmondi',
             'shop_name' => 'amazing store',
- 
+        ]);
     }
 }
