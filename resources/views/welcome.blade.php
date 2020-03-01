@@ -102,7 +102,7 @@
               <img class="d-block img-fluid" src="{{asset('images/promo2.png')}}" alt="Second slide">
             </div>
             <div class="carousel-item">
-              <img class="d-block img-fluid" src={{asset('images/promo3.png')}} alt="Third slide">
+              <img class="d-block img-fluid" src="{{asset('images/promo3.png')}}" alt="Third slide">
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
