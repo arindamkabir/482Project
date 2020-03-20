@@ -27,7 +27,7 @@
                 <td>{{$shop_owner->shop_name}}</td>
                 <td>
                 <td>
-                <form action="{{route('shopowner.edit', ['id' => $shop_owner->user_id])}}" method="GET">
+                <form action="{{route('shopowner.edit', ['id' => $shop_owner->shop_id])}}" method="GET">
                 <button type="submit" class="btn btn-info"><i class="far fa-edit"></i></button>
                 </form>
                 </td>
