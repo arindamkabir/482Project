@@ -26,7 +26,7 @@ class ShopOwnerController extends Controller
      */
     public function edit($id){
         $shop_owner = DB::table('shop_owners')->where('shop_id', $id)->first();
-        return view('admin.shop_owner.edit', ['shop_owner' => $shop_owner]);
+        return view('admin.shopowners.edit', ['shop_owner' => $shop_owner]);
     }
 
     public function update($id, Request $request){
@@ -40,7 +40,7 @@ class ShopOwnerController extends Controller
                 ]
         );
 
-        return redirect()->route('admin.shop_owners');
+        return redirect()->route('admin.shopowners');
 
     }
     /**

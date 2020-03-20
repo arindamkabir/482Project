@@ -5,7 +5,6 @@
 <div class="d-flex justify-content-between">
         <h4 class="admin-heading"><i class="fas fa-pills"></i> Shop Owners</h4>
 
-        <div class="admin-add-btn"><a href="{{route('shop_owner.create')}}"><button class="btn btn-primary ">Add New Shop Owner</button></a></div>
     </div>
 
 
@@ -27,12 +26,12 @@
                 <td>{{$shop_owner->location}}</td>
                 <td>{{$shop_owner->shop_name}}</td>
                 <td>
-                <form action="{{route('shop_owner.destroy', ['id' => $shop_owner->shop_id])}}" method="DELETE">
+                <form action="{{route('shopowner.destroy', ['id' => $shop_owner->shop_id])}}" method="DELETE">
                 <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
                 </form>
                 </td>
                 <td>
-                <form action="{{route('shop_owner.edit', ['id' => $shop_owner->user_id])}}" method="GET">
+                <form action="{{route('shopowner.edit', ['id' => $shop_owner->user_id])}}" method="GET">
                 <button type="submit" class="btn btn-info"><i class="far fa-edit"></i></button>
                 </form>
                 </td>
