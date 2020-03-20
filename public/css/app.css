@@ -10884,3 +10884,18 @@ a.text-dark:focus {
   }
 }
 
+.sidebar .nav-link {
+  color: #fff !important;
+  padding: 0.5rem, 1rem;
+  font-weight: 600;
+}
+
+.sidebar-sticky {
+  height: 100vh;
+  position: -webkit-sticky;
+  position: sticky;
+  padding-top: 0.5rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
