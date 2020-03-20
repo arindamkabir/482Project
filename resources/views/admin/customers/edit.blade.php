@@ -8,10 +8,10 @@
     @csrf
         <div class="form-row">
             <div class="col">
-            <input type="text" name="name" class="form-control" placeholder="{{$customer->name}}">
+            <input type="text" name="user_id" class="form-control" placeholder="{{$customer->user_id}}">
             </div>
             <div class="col">
-            <input type="text" name="stock" class="form-control" placeholder="{{$customer->stock}}">
+            <input type="text" name="location" class="form-control" placeholder="{{$customer->location}}">
             </div>
             <div class="col">
             <input type="text" name="price" class="form-control" placeholder="{{$customer->price}}">

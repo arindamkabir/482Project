@@ -56,7 +56,8 @@ class CustomerController extends Controller
      */
     public function edit($id)
     {
-        //
+        $medicine = DB::table('customers')->where('customer_id', $id)->first();
+        return view('admin.customers.edit', ['customer' => $customer]);
     }
 
     /**
@@ -68,7 +69,16 @@ class CustomerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        DB::table('customers')
+            ->where('customer_id', $id)
+            ->update(
+                [
+                    'location' => $request->location,
+                    'user_id' => $request->user_id
+                ]
+        );
+
+        return redirect()->route('admin.customers');
     }
 
     /**
