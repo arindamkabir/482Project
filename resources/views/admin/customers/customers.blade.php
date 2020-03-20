@@ -6,7 +6,6 @@
     <div class="d-flex justify-content-between">
         <h4 class="admin-heading"><i class="fas fa-pills"></i> Medicines</h4>
 
-        <div class="admin-add-btn"><a href="{{route('customer.create')}}"><button class="btn btn-primary ">Add New Medicine</button></a></div>
     </div>
 
 
@@ -28,11 +27,6 @@
                 <td>{{$customer->location}}</td>
                 <td>{{$customer->created_at}}</td>
                 <td>{{$customer->updated_at}}</td>
-                <td>
-                <form action="{{route('customer.destroy', ['id' => $customer->customer_id])}}" method="DELETE">
-                <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
-                </form>
-                </td>
                 <td>
                 <form action="{{route('customer.edit', ['id' => $customer->customer_id])}}" method="GET">
                 <button type="submit" class="btn btn-info"><i class="far fa-edit"></i></button>

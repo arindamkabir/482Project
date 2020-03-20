@@ -15,7 +15,7 @@
             <th scope="col">User ID</th>
             <th scope="col">Location</th>
             <th scope="col">Shop Name</th>
-            <th scope="col" colspan="2">Actions</th>
+            <th scope="col" colspan="1">Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -26,10 +26,6 @@
                 <td>{{$shop_owner->location}}</td>
                 <td>{{$shop_owner->shop_name}}</td>
                 <td>
-                <form action="{{route('shopowner.destroy', ['id' => $shop_owner->shop_id])}}" method="DELETE">
-                <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
-                </form>
-                </td>
                 <td>
                 <form action="{{route('shopowner.edit', ['id' => $shop_owner->user_id])}}" method="GET">
                 <button type="submit" class="btn btn-info"><i class="far fa-edit"></i></button>
