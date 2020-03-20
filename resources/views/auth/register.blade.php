@@ -61,6 +61,32 @@
                             </div>
                         </div>
 
+                        <div class="form-group row">
+                            <label for="whoyourare" class="col-md-4 col-form-label text-md-right">{{ __('Role') }}</label>
+
+                            <div class="col-md-6">
+                                <div class="radio">
+                                    <input id="customer" type="radio" class="form-control @error('role') is-invalid @enderror" name="role" value="{{ old('role') }}" required autocomplete="role" autofocus>
+                                    <label for="customer">Customer</label><br>
+                                </div>
+                                <div class="radio">
+                                    <input id="deliveryperson" type="radio" class="form-control @error('role') is-invalid @enderror" name="role" value="{{ old('role') }}" required autocomplete="role" autofocus>
+                                    <label for="deliveryperson">Delivery Person</label><br>
+                                </div>
+                                <div class="radio">
+                                    <input id="storeowner" type="radio" class="form-control @error('role') is-invalid @enderror" name="role" value="{{ old('role') }}" required autocomplete="role" autofocus>
+                                    <label for="storeowner">Store Owner</label><br>
+                                </div>
+
+                                @error('role')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
