@@ -8,13 +8,13 @@
     @csrf
         <div class="form-row">
             <div class="col">
-            <input type="text" name="name" class="form-control" placeholder="{{$shop_owner->user_id}}">
+            <input type="text" name="user_id" class="form-control" placeholder="{{$shop_owner->user_id}}">
             </div>
             <div class="col">
-            <input type="text" name="stock" class="form-control" placeholder="{{$shop_owner->location}}">
+            <input type="text" name="location" class="form-control" placeholder="{{$shop_owner->location}}">
             </div>
             <div class="col">
-            <input type="text" name="price" class="form-control" placeholder="{{$shop_owner->shop_ame}}">
+            <input type="text" name="shop_name" class="form-control" placeholder="{{$shop_owner->shop_name}}">
             </div>
         </div>
         <button type="submit" class="btn btn-primary my-3">UPDATE</button>
