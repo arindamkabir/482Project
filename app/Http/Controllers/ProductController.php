@@ -1,84 +1,79 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use DB;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
+
+    //show all product
+    public function index(){
+
+        $medicines = DB::table('products')->get();
+
+        return view('product.products', ['products' => $products]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+
+    //show the add product form
+
+    public function create(){
+    
+        return view('admin.products.create');
+
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
+    //store a row into the database
+
+    public function store(Request $request){
+
+        DB::table('products')->insert(
+            [ 
+                'name' => $request->name,
+                'stock' => $request->stock,
+                'price' => $request->price
+            ]
+        );
+
+        return redirect()->route('admin.products');
+
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
+    public function edit($id){
+        $medicine = DB::table('products')->where('product_id', $id)->first();
+        return view('admin.product.edit', ['product' => $product]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
+    public function update($id, Request $request){
+        DB::table('products')
+            ->where('product_id', $id)
+            ->update(
+                [
+                    'name' => $request->name,
+                    'stock' => $request->stock,
+                    'price' => $request->price
+                ]
+        );
+
+        return redirect()->route('admin.products');
+
+    }
+    public function destroy($id){
+
+        DB::table('products')->where('product_id', $id)->delete();
+        
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
+
+    //show a specific product
+    public function show($id){
+        $medicine = DB::table('products')->where('product_id', $id)->first();
+        return view('product.product', ['product' => $product]);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
+    //show all product (admin panel)
+
+
+   
 }
