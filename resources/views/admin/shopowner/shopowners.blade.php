@@ -20,7 +20,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($shopowners as $shopowner)
+            @foreach($shop_owners as $shop_owner)
                 <tr>
                 <th scope="row">{{$shop_owner->shop_id}}</th>
                 <td>{{$shop_owner->user_id}}</td>
