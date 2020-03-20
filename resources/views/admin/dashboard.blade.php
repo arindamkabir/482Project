@@ -8,7 +8,7 @@
             <div class="card ">
                 <div class="card-body d-flex justify-content-between">
                 <i class="fas fa-capsules"></i>
-                <p>{{$med_count}}</p>
+                <p>12</p>
                 </div>
             </div>
         </div>
@@ -16,7 +16,7 @@
             <div class="card ">
                 <div class="card-body d-flex justify-content-between">
                 <i class="fas fa-user-md"></i>
-                <p>{{$doc_count}}</p>
+                <p>1</p>
                 </div>
             </div>
         </div>
@@ -24,7 +24,7 @@
             <div class="card ">
                 <div class="card-body d-flex justify-content-between">
                 <i class="fas fa-chart-line"></i>
-                <p>{{$user_count}}</p>
+                <p>1</p>
                 </div>
             </div>
         </div>
@@ -32,7 +32,7 @@
             <div class="card ">
                 <div class="card-body d-flex justify-content-between">
                 <i class="fas fa-shopping-cart"></i>
-                <p>{{$order_count}}</p>
+                <p>1</p>
                 </div>
             </div>
         </div>
