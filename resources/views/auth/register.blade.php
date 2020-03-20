@@ -65,18 +65,12 @@
                             <label for="whoyourare" class="col-md-4 col-form-label text-md-right">{{ __('Role') }}</label>
 
                             <div class="col-md-6">
-                                <div class="radio">
-                                    <input id="customer" type="radio" class="form-control @error('role') is-invalid @enderror" name="role" value="{{ old('role') }}" required autocomplete="role" autofocus>
-                                    <label for="customer">Customer</label><br>
-                                </div>
-                                <div class="radio">
-                                    <input id="deliveryperson" type="radio" class="form-control @error('role') is-invalid @enderror" name="role" value="{{ old('role') }}" required autocomplete="role" autofocus>
-                                    <label for="deliveryperson">Delivery Person</label><br>
-                                </div>
-                                <div class="radio">
-                                    <input id="storeowner" type="radio" class="form-control @error('role') is-invalid @enderror" name="role" value="{{ old('role') }}" required autocomplete="role" autofocus>
-                                    <label for="storeowner">Store Owner</label><br>
-                                </div>
+                            <select class="custom-select">
+                                <option selected>Select Your Role</option>
+                                <option value="1">Customer</option>
+                                <option value="2">Shop-Owner</option>
+                                <option value="3">Delivery Boi</option>
+                            </select>
 
                                 @error('role')
                                     <span class="invalid-feedback" role="alert">
