@@ -15,28 +15,26 @@
             <tr class="">
             <th scope="col">ID</th>
             <th scope="col">User ID</th>
-            <th scope="col">User Name</th>
             <th scope="col">Added</th>
             <th scope="col">Updated</th>
             <th scope="col" colspan="2">Actions</th>
             </tr>
         </thead>
         <tbody>
-            @foreach($medicines as $medicine)
+            @foreach($customers as $customer)
                 <tr>
-                <th scope="row">{{$medicine->med_id}}</th>
-                <td>{{$medicine->med_name}}</td>
-                <td>{{$medicine->med_stock}}</td>
-                <td>{{$medicine->med_price}}</td>
-                <td>{{$medicine->created_at}}</td>
-                <td>{{$medicine->updated_at}}</td>
+                <th scope="row">{{$customer->customer_id}}</th>
+                <td>{{$customer->user_id}}</td>
+                <td>{{$customer->location}}</td>
+                <td>{{$customer->created_at}}</td>
+                <td>{{$customer->updated_at}}</td>
                 <td>
-                <form action="{{route('medicine.destroy', ['id' => $medicine->med_id])}}" method="DELETE">
+                <form action="{{route('customer.destroy', ['id' => $customer->customer_id])}}" method="DELETE">
                 <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
                 </form>
                 </td>
                 <td>
-                <form action="{{route('medicine.edit', ['id' => $medicine->med_id])}}" method="GET">
+                <form action="{{route('customer.edit', ['id' => $customer->customer_id])}}" method="GET">
                 <button type="submit" class="btn btn-info"><i class="far fa-edit"></i></button>
                 </form>
                 </td>
