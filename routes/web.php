@@ -19,10 +19,14 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::resource('customer', 'CustomerController');
+Route::resource('shopowner', 'ShopOwnerController');
+Route::resource('product', 'ProductController');
+
 Route::get('/admin', 'AdminController@index')->name('admin.dashboard');
 Route::get('/admin/customers', 'AdminController@customers')->name('admin.customers');
-// Route::get('/admin/appointments', 'AdminController@appointments')->name('admin.appointments')->middleware('isAdmin');
-// Route::get('/admin/medicines','AdminController@medicines')->name('admin.medicines')->middleware('isAdmin');
+Route::get('/admin/products', 'AdminController@products')->name('admin.products');
+Route::get('/admin/shopowners','AdminController@shopowners')->name('admin.shopowners');
 // Route::get('/admin/doctors','AdminController@doctors')->name('admin.doctors')->middleware('isAdmin');
 
 
