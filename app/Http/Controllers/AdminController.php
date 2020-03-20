@@ -32,6 +32,11 @@ class AdminController extends Controller
         return view('admin.products.products', ['products' => $products]);
     }
     
+    public function shopowners(){
+        $products = DB::table('shop_owners')->get();
+        return view('admin.shop_owners.shop_owners', ['shop_owners' => $shop_owners]);
+    }
+    
     public function create()
     {
         //
