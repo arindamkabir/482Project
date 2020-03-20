@@ -32,7 +32,7 @@
                 </div>
                     <div class="sidebar-sticky">
                         <ul class="nav flex-column">>
-                            <li class="nav-item sidebar-item"><a class="nav-link active" href="{{ url('/admin/doctors') }}">Doctors</a></li>
+                            <li class="nav-item sidebar-item"><a class="nav-link active" href="{{ url('/admin/customers') }}">Customers</a></li>
                             <li class="nav-item sidebar-item"><a class="nav-link" href="{{ url('/admin/appointments') }}">Appointments</a></li>
                             <li class="nav-item "><a class="nav-link active" href="{{ url('/admin/medicines') }}">Medicines</a></li>
                             <li class="nav-item "><a class="nav-link active" href="{{ url('/admin/orders') }}">Orders</a></li>
