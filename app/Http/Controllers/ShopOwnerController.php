@@ -35,7 +35,7 @@ class ShopOwnerController extends Controller
             ->update(
                 [
                     'user_id' => $request->user_id,
-                    'med_stock' => $request->location,
+                    'location' => $request->location,
                     'shop_name' => $request->shop_name
                 ]
         );
