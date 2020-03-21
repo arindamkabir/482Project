@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <h4 class="text-center lead">Edit Shop Owner</h4>
-    <form method="POST" action="{{route('shop_owner.update', ['id' => $shop_owner->shop_id])}}">
+    <form method="POST" action="{{route('shopowner.update', ['id' => $shop_owner->shop_id])}}">
     {{ method_field('PUT') }}
     @csrf
         <div class="form-row">

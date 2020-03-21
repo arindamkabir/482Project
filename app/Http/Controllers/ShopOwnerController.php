@@ -16,7 +16,7 @@ class ShopOwnerController extends Controller
         $shop_owners = DB::table('shop_owners')->get();
 
         return view('shop_owner.shop_owners', ['shop_owners' => $shop_owners]);
-   
+
     }
 
     /**
