@@ -23,15 +23,15 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($deliveryman as $deliveryman)
+            @foreach($delivery_man as $deliveryman)
                 <tr>
-                <th scope="row">{{$deliveryman->deliveryman_id}}</th>
-                <td>{{$deliveryman->user_id}}</td>
-                <td>{{$deliveryman->name}}</td>
-                <td>{{$deliveryman->location}}</td>
-                <td>{{$deliveryman->contact}}</td>
-                <td>{{$deliveryman->created_at}}</td>
-                <td>{{$deliveryman->updated_at}}</td>
+                <th scope="row">{{$delivery_man->deliveryman_id}}</th>
+                <td>{{$delivery_man->user_id}}</td>
+                <td>{{$delivery_man->name}}</td>
+                <td>{{$delivery_man->location}}</td>
+                <td>{{$delivery_man->contact}}</td>
+                <td>{{$delivery_man->created_at}}</td>
+                <td>{{$delivery_man->updated_at}}</td>
                 <td>
                 <form action="{{route('deliveryman.edit', ['id' => $deliveryman->deliveryman_id])}}" method="GET">
                 <button type="submit" class="btn btn-info"><i class="far fa-edit"></i></button>
