@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class DeliveryManController extends Controller
 {
@@ -56,7 +57,7 @@ class DeliveryManController extends Controller
      */
     public function edit($id)
     {
-        $deliveryman = DB::table('deliveryman')->where('deliveryman_id', $id)->first();
+        $deliveryman = DB::table('delivery_man')->where('dman_id', $id)->first();
         return view('admin.deliveryman.edit', ['deliveryman' => $deliveryman]);
     }
 
@@ -69,8 +70,8 @@ class DeliveryManController extends Controller
      */
     public function update(Request $request, $id)
     {
-        DB::table('deliveryman')
-            ->where('deliveryman_id', $id)
+        DB::table('delivery_man')
+            ->where('dman_id', $id)
             ->update(
                 [
                     'location' => $request->location,

@@ -27,9 +27,9 @@ class AdminController extends Controller
         return view('admin.customers.customers', ['customers' => $customers]);
     }
 
-    public function deliveryman(){
-        $customers = DB::table('deliveryman')->get();
-        return view('admin.deliveryman.deliveryman', ['deliveryman' => $deliveryman]);
+    public function deliverymen(){
+        $deliverymen = DB::table('delivery_man')->get();
+        return view('admin.deliveryman.deliveryman', ['deliverymen' => $deliverymen]);
     }
 
     public function products(){

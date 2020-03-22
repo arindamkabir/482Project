@@ -28,7 +28,7 @@ Route::get('/admin', 'AdminController@index')->name('admin.dashboard');
 Route::get('/admin/customers', 'AdminController@customers')->name('admin.customers');
 Route::get('/admin/products', 'AdminController@products')->name('admin.products');
 Route::get('/admin/shopowners','AdminController@shopowners')->name('admin.shopowners');
-Route::get('/admin/deliveryman','AdminController@deliveryman')->name('admin.deliveryman');
+Route::get('/admin/deliverymen','AdminController@deliverymen')->name('admin.deliverymen');
 // Route::get('/admin/doctors','AdminController@doctors')->name('admin.doctors')->middleware('isAdmin');
 
 
