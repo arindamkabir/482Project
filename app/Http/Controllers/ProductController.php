@@ -10,7 +10,7 @@ class ProductController extends Controller
     //show all product
     public function index(){
 
-        $medicines = DB::table('products')->get();
+        $products = DB::table('products')->get();
 
         return view('product.products', ['products' => $products]);
     }

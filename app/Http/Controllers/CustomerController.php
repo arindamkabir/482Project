@@ -56,7 +56,7 @@ class CustomerController extends Controller
      */
     public function edit($id)
     {
-        $medicine = DB::table('customers')->where('customer_id', $id)->first();
+        $customer = DB::table('customers')->where('customer_id', $id)->first();
         return view('admin.customers.edit', ['customer' => $customer]);
     }
 

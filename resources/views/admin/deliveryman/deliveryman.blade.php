@@ -4,7 +4,7 @@
 <div class="container">
 
     <div class="d-flex justify-content-between">
-        <h4 class="admin-heading"><i class="fas fa-pills"></i> Customers</h4>
+        <h4 class="admin-heading"><i class="fas fa-pills"></i> Delivery Man</h4>
 
     </div>
 
@@ -23,17 +23,17 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($customers as $customer)
+            @foreach($deliveryman as $deliveryman)
                 <tr>
-                <th scope="row">{{$customer->customer_id}}</th>
-                <td>{{$customer->user_id}}</td>
-                <td>{{$customer->name}}</td>
-                <td>{{$customer->location}}</td>
-                <td>{{$customer->contact}}</td>
-                <td>{{$customer->created_at}}</td>
-                <td>{{$customer->updated_at}}</td>
+                <th scope="row">{{$deliveryman->deliveryman_id}}</th>
+                <td>{{$deliveryman->user_id}}</td>
+                <td>{{$deliveryman->name}}</td>
+                <td>{{$deliveryman->location}}</td>
+                <td>{{$deliveryman->contact}}</td>
+                <td>{{$deliveryman->created_at}}</td>
+                <td>{{$deliveryman->updated_at}}</td>
                 <td>
-                <form action="{{route('customer.edit', ['id' => $customer->customer_id])}}" method="GET">
+                <form action="{{route('deliveryman.edit', ['id' => $deliveryman->deliveryman_id])}}" method="GET">
                 <button type="submit" class="btn btn-info"><i class="far fa-edit"></i></button>
                 </form>
                 </td>

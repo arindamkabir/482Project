@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use DB;
 
-class AdminController extends Controller
+class DeliveryManController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +13,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin.dashboard');
+        //
     }
 
     /**
@@ -22,26 +21,6 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function customers(){
-        $customers = DB::table('customers')->get();
-        return view('admin.customers.customers', ['customers' => $customers]);
-    }
-
-    public function deliveryman(){
-        $customers = DB::table('deliveryman')->get();
-        return view('admin.deliveryman.deliveryman', ['deliveryman' => $deliveryman]);
-    }
-
-    public function products(){
-        $products = DB::table('products')->get();
-        return view('admin.products.products', ['products' => $products]);
-    }
-    
-    public function shopowners(){
-        $shop_owners = DB::table('shop_owners')->get();
-        return view('admin.shopowners.shopowners', ['shop_owners' => $shop_owners]);
-    }
-    
     public function create()
     {
         //
@@ -77,7 +56,8 @@ class AdminController extends Controller
      */
     public function edit($id)
     {
-        //
+        $deliveryman = DB::table('deliveryman')->where('deliveryman_id', $id)->first();
+        return view('admin.deliveryman.edit', ['deliveryman' => $deliveryman]);
     }
 
     /**
@@ -89,7 +69,16 @@ class AdminController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        DB::table('deliveryman')
+            ->where('deliveryman_id', $id)
+            ->update(
+                [
+                    'location' => $request->location,
+                    'user_id' => $request->user_id
+                ]
+        );
+
+        return redirect()->route('admin.deliveryman');
     }
 
     /**
