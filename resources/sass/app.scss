@@ -10,13 +10,16 @@
 .sidebar {
     .nav-link {
         color: #fff !important;
-        padding: 0.5rem, 1rem;
+        text-align: center;
+        padding: 1.7rem 0;
         font-weight: 600;
+        // border-bottom: 2px solid gray;
     }
 }
 
 .sidebar-sticky {
     height: 100vh;
+    width: 15vw;
     position: sticky;
     padding-top: 0.5rem;
     overflow-x: hidden;

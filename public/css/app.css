@@ -10886,12 +10886,14 @@ a.text-dark:focus {
 
 .sidebar .nav-link {
   color: #fff !important;
-  padding: 0.5rem, 1rem;
+  text-align: center;
+  padding: 1.7rem 0;
   font-weight: 600;
 }
 
 .sidebar-sticky {
   height: 100vh;
+  width: 15vw;
   position: -webkit-sticky;
   position: sticky;
   padding-top: 0.5rem;

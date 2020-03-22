@@ -18,24 +18,26 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/fontawesome.min.css') }}" rel="stylesheet">
+
 </head>
 </head>
 <body>
     <div id="app">
         <div class="row">
-                <div class="sidebar col-md-2 d-none d-md-block bg-dark">
+                <div class="sidebar d-none d-md-block bg-dark">
                 
                 <div class="logo">
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <a class="navbar-brand text-center" href="{{ url('/') }}">
                         {{ config('app.name', 'Laravel') }}
                     </a>
                 </div>
                     <div class="sidebar-sticky">
                         <ul class="nav flex-column">>
-                            <li class="nav-item sidebar-item"><a class="nav-link active" href="{{ url('/admin/customers') }}">Customers</a></li>
+                            <li class="nav-item sidebar-item"><a class="nav-link active" href="{{ url('/admin/customers') }}"><i class="fas fa-user-friends"></i>Customers</a></li>
                             <li class="nav-item sidebar-item"><a class="nav-link" href="{{ url('/admin/products') }}">Products</a></li>
                             <li class="nav-item "><a class="nav-link active" href="{{ url('/admin/shopowners') }}">Shopowners</a></li>
-                            <li class="nav-item "><a class="nav-link active" href="{{ url('/admin/orders') }}">Orders</a></li>
+                            <li class="nav-item "><a class="nav-link active" href="{{ url('/admin/deliverymen') }}">Delivery Men</a></li>
                         </ul>
                     </div>
                 </div>
