@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
+use App\User;
 use DB;
 
 class DeliveryManController extends Controller
@@ -14,7 +15,9 @@ class DeliveryManController extends Controller
      */
     public function index()
     {
-        //
+        $delivery_man = DB::table('delivery_man')->get();
+
+        return view('delivery_man.delivery_man', ['delivery_man' => $delivery_man]);
     }
 
     /**
@@ -24,7 +27,7 @@ class DeliveryManController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.deliveryman.create');
     }
 
     /**
@@ -76,8 +79,8 @@ class DeliveryManController extends Controller
      */
     public function edit($id)
     {
-        $deliveryman = DB::table('delivery_man')->where('dman_id', $id)->first();
-        return view('admin.deliveryman.edit', ['deliveryman' => $deliveryman]);
+        $delivery_man = DB::table('delivery_man')->where('dman_id', $id)->first();
+        return view('admin.deliveryman.edit', ['delivery_man' => $delivery_man]);
     }
 
     /**

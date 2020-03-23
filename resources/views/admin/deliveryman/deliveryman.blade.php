@@ -33,7 +33,7 @@
                 <td>{{$delivery_man->created_at}}</td>
                 <td>{{$delivery_man->updated_at}}</td>
                 <td>
-                <form action="{{route('deliveryman.edit', ['id' => $deliveryman->dman_id])}}" method="GET">
+                <form action="{{route('deliveryman.edit', $deliveryman->dman_id)}}" method="GET">
                 <button type="submit" class="btn btn-info"><i class="far fa-edit"></i></button>
                 </form>
                 </td>
