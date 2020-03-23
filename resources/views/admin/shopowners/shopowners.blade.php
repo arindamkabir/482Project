@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-<div class="d-flex justify-content-between">
+    <div class="d-flex justify-content-between">
         <h4 class="admin-heading"><i class="fas fa-pills"></i> Shop Owners</h4>
         <div class="admin-add-btn"><a href="{{route('shopowner.create')}}"><button class="btn btn-primary ">Add New Shop Owner</button></a></div>
     </div>

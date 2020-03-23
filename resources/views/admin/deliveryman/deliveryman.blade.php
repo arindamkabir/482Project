@@ -5,7 +5,7 @@
 
     <div class="d-flex justify-content-between">
         <h4 class="admin-heading"><i class="fas fa-pills"></i> Delivery Man</h4>
-
+        <div class="admin-add-btn"><a href="{{route('deliveryman.create')}}"><button class="btn btn-primary ">Add New Delivery Man</button></a></div>
     </div>
 
 
