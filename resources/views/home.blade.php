@@ -34,7 +34,7 @@
             </div>
         </div>
       
-        @foreach($products->chunk(3) as $chunk))
+        @foreach($products->chunk(3) as $chunk)
         <div class="row">
             @foreach ($chunk as $product)
             <div class="col-lg-4 col-md-6 mb-4">
