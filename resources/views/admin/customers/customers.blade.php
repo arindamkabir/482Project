@@ -16,6 +16,7 @@
             <th scope="col">User ID</th>
             <th scope="col">Name</th>
             <th scope="col">Location</th>
+            <th scope="col">Address</th>
             <th scope="col">Contact</th>
             <th scope="col">Added</th>
             <th scope="col">Updated</th>
@@ -29,11 +30,12 @@
                 <td>{{$customer->user_id}}</td>
                 <td>{{$customer->name}}</td>
                 <td>{{$customer->location}}</td>
+                <td>{{$customer->address}}</td>
                 <td>{{$customer->contact}}</td>
                 <td>{{$customer->created_at}}</td>
                 <td>{{$customer->updated_at}}</td>
                 <td>
-                <form action="{{route('customer.edit', ['id' => $customer->customer_id])}}" method="GET">
+                <form action="{{route('customer.edit', $customer->customer_id)}}" method="GET">
                 <button type="submit" class="btn btn-info"><i class="far fa-edit"></i></button>
                 </form>
                 </td>

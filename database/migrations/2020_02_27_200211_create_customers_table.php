@@ -17,6 +17,7 @@ class CreateCustomersTable extends Migration
             $table->bigIncrements('customer_id');
             $table->integer('user_id');
             $table->string('location');
+            $table->string('address');            
             $table->timestamps();
         });
     }
