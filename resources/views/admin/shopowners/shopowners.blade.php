@@ -4,7 +4,7 @@
 <div class="container">
 <div class="d-flex justify-content-between">
         <h4 class="admin-heading"><i class="fas fa-pills"></i> Shop Owners</h4>
-
+        <div class="admin-add-btn"><a href="{{route('shopowner.create')}}"><button class="btn btn-primary ">Add New Shop Owner</button></a></div>
     </div>
 
 
@@ -15,7 +15,7 @@
             <th scope="col">User ID</th>
             <th scope="col">Location</th>
             <th scope="col">Shop Name</th>
-            <th scope="col" colspan="1">Actions</th>
+            <th scope="col">Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -26,8 +26,7 @@
                 <td>{{$shop_owner->location}}</td>
                 <td>{{$shop_owner->shop_name}}</td>
                 <td>
-                <td>
-                <form action="{{route('shopowner.edit', ['id' => $shop_owner->shop_id])}}" method="GET">
+                <form action="{{route('shopowner.edit', $shop_owner->shop_id)}}" method="GET">
                 <button type="submit" class="btn btn-info"><i class="far fa-edit"></i></button>
                 </form>
                 </td>

@@ -5,18 +5,39 @@
     <h4 class="text-center lead">Add a new product</h4>
     <form method="POST" action="{{route('product.store')}}">
     @csrf
-        <div class="form-row">
-            <div class="col">
-            <input type="text" name="name" class="form-control" placeholder="Product Name">
-            </div>
-            <div class="col">
-            <input type="text" name="stock" class="form-control" placeholder="Stock">
-            </div>
-            <div class="col">
-            <input type="text" name="price" class="form-control" placeholder="Price">
+        <div class="form-group">
+            <label for="name">Product Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Product Name">
+        </div>
+        <div class="form-group">
+            <label for="shop_id">Example select</label>
+            <select class="form-control" id="shop_id" name="shop_id">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="image" name="image">
+                <label class="custom-file-label" for="image">Choose Image</label>
             </div>
         </div>
-        <button type="submit" class="btn btn-primary my-3">Add</button>
+        <div class="form-group">
+            <label for="price">Price</label>
+            <input type="text" class="form-control" id="price" name="price" placeholder="Price">
+        </div>
+        <div class="form-group">
+            <label for="stock">Stock</label>
+            <input type="text" class="form-control" id="stock" name="stock" placeholder="Stock">
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea name="description" class="form-control" id="description" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary my-3">Add Product</button>
     </form>
 </div>
 @endsection

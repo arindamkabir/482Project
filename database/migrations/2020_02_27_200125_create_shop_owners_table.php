@@ -18,6 +18,8 @@ class CreateShopOwnersTable extends Migration
             $table->integer('user_id');
             $table->string('location');
             $table->string('shop_name');
+            $table->timestamps();
+
     });
     
     }

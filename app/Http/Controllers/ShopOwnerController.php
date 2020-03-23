@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
+use App\User;
+use DB;
 
 class ShopOwnerController extends Controller
 {
@@ -16,6 +18,34 @@ class ShopOwnerController extends Controller
         $shop_owners = DB::table('shop_owners')->get();
 
         return view('shop_owner.shop_owners', ['shop_owners' => $shop_owners]);
+
+    }
+
+    public function create(){
+        return view('admin.shopowners.create');
+
+    }
+
+    public function store(Request $request){
+        User::create([
+            "name" => $request->owner_name,
+            "email" => $request->email,
+            "password" => Hash::make($request->password),
+            "contact" => $request->contact,
+            "role" => "2",
+            "isAdmin" => False,
+        ]);
+
+        $id = DB::getPdo()->lastInsertId();
+
+        DB::table('shop_owners')->insert([
+            "shop_name" => $request->shop_name,
+            "location" => $request->location,
+            "user_id" => $id,
+            'created_at' => date('Y-m-d H:i:s')
+        ]);
+
+        return redirect()->route('admin.shopowners');
 
     }
 
@@ -34,7 +64,6 @@ class ShopOwnerController extends Controller
             ->where('shop_id', $id)
             ->update(
                 [
-                    'user_id' => $request->user_id,
                     'location' => $request->location,
                     'shop_name' => $request->shop_name
                 ]

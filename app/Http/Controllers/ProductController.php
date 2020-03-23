@@ -32,7 +32,8 @@ class ProductController extends Controller
             [ 
                 'name' => $request->name,
                 'stock' => $request->stock,
-                'price' => $request->price
+                'price' => $request->price,
+                'created_at' => date('Y-m-d H:i:s')
             ]
         );
 
