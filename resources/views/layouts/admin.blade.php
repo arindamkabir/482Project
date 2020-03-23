@@ -15,12 +15,11 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <link href="{{ asset('css/fontawesome.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/fontawesome.css') }}" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-</head>
 </head>
 <body>
     <div id="app">
