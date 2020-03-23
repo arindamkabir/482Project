@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
+use App\User;
+use DB;
 
 class CustomerController extends Controller
 {
@@ -13,17 +15,16 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        //
+        $customers = DB::table('customers')->get();
+
+        return view('customer.customers', ['customers' => $customers]);
+
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
+        return view('admin.customers.create');
+
     }
 
     /**
@@ -34,7 +35,26 @@ class CustomerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        DB::table('users')->insert([
+            "name" => $request->customer_name,
+            "email" => $request->email,
+            "password" => Hash::make($request->password),
+            "contact" => $request->contact,
+            "role" => "1",
+            "isAdmin" => False,
+            'created_at' => date('Y-m-d H:i:s')
+        ]);
+
+        $id = DB::getPdo()->lastInsertId();
+
+        DB::table('customers')->insert([
+            "location" => $request->location,
+            "user_id" => $id,
+            'created_at' => date('Y-m-d H:i:s')
+        ]);
+
+        return redirect()->route('admin.customers');
+
     }
 
     /**

@@ -5,6 +5,7 @@
 
     <div class="d-flex justify-content-between">
         <h4 class="admin-heading"><i class="fas fa-pills"></i> Customers</h4>
+       <div class="admin-add-btn"><a href="{{route('customer.create')}}"><button class="btn btn-primary ">Add New Customer</button></a></div>
 
     </div>
 
