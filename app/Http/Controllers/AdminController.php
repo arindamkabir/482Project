@@ -40,7 +40,7 @@ class AdminController extends Controller
 
     public function products(){
         $products_shops = DB::table('products')
-        ->join('shop_owners', 'products.product_id', '=', 'shop_owners.shop_id')
+        ->leftJoin('shop_owners', 'products.product_id', '=', 'shop_owners.shop_id')
         ->select('products.product_id',  'shop_owners.shop_id', 'products.price', 'products.stock','products.description', 'products.image', 'products.name', 'products.created_at', 'products.updated_at','shop_owners.shop_name','shop_owners.location')
         ->get();
 
