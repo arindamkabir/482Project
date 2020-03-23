@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use DB;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+
 
 class ProductController extends Controller
 {
@@ -19,8 +21,9 @@ class ProductController extends Controller
     //show the add product form
 
     public function create(){
+        $shop_owners = DB::table('shop_owners')->get();
     
-        return view('admin.products.create');
+        return view('admin.products.create',['shop_owners' => $shop_owners]);
 
     }
 
@@ -28,16 +31,31 @@ class ProductController extends Controller
 
     public function store(Request $request){
 
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+  
+        $imageName = time().'.'.$request->image->extension();  
+   
+        $request->image->move(public_path('images'), $imageName);
+   
+
+
         DB::table('products')->insert(
             [ 
                 'name' => $request->name,
                 'stock' => $request->stock,
                 'price' => $request->price,
+                'image' => $imageName,
+                'shop_id' => $request->shop_id,
+                'description' => $request->description,
                 'created_at' => date('Y-m-d H:i:s')
             ]
         );
 
-        return redirect()->route('admin.products');
+        return redirect()->route('admin.products')
+            ->with('success','You have successfully upload image.')
+            ->with('image',$imageName);;
 
     }
 

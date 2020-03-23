@@ -12,11 +12,9 @@
         <div class="form-group">
             <label for="shop_id">Example select</label>
             <select class="form-control" id="shop_id" name="shop_id">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
+            @foreach($shop_owners as $shop_owner)
+                <option value="{{$shop_owner->shop_id}}">{{$shop_owner->shop_name}}</option>
+            @endforeach
             </select>
         </div>
         <div class="form-group">

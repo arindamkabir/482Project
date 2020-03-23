@@ -27,13 +27,14 @@ class ShopOwnerController extends Controller
     }
 
     public function store(Request $request){
-        User::create([
+        DB::table('users')->insert([
             "name" => $request->owner_name,
             "email" => $request->email,
             "password" => Hash::make($request->password),
             "contact" => $request->contact,
             "role" => "2",
             "isAdmin" => False,
+            'created_at' => date('Y-m-d H:i:s')
         ]);
 
         $id = DB::getPdo()->lastInsertId();
