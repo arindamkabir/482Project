@@ -56,7 +56,7 @@ class DeliveryManController extends Controller
             'created_at' => date('Y-m-d H:i:s')
         ]);
 
-        return redirect()->route('admin.deliveryman');
+        return redirect()->route('admin.deliverymen');
 
     }
 
@@ -101,7 +101,7 @@ class DeliveryManController extends Controller
                 ]
         );
 
-        return redirect()->route('admin.deliveryman');
+        return redirect()->route('admin.deliverymen');
     }
 
     /**
