@@ -29,17 +29,12 @@
         </thead>
         <tbody>
             @foreach($products as $product)
-            @foreach($shop_owners as $shopowner)
-                @if ($product->shop_id == $shopowner->shop_id)
-                    $so = $shopowner 
-                @endif
-            @endforeach
                 <tr>
                 <th scope="row">{{$product->product_id}}</th>
                 <td><img src="images/{{$product->image}}" ></td>
-                <td>{{$so->shop_id}}</td>
-                <td>{{$so->shop_name}}</td>
-                <td>{{$so->location}}</td>
+                <td>{{$product->shop_id}}</td>
+                <td>{{$product->shop_name}}</td>
+                <td>{{$product->location}}</td>
                 <td>{{$product->description}}</td>
                 <td>{{$product->stock}}</td>
                 <td>{{$product->price}}</td>
