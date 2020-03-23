@@ -23,7 +23,10 @@ class AdminController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function customers(){
-        $customers = DB::table('customers')->get();
+        $customers = DB::table('customers')
+        ->join('users', 'customers.user_id', '=', 'users.id')
+        ->select('customers.customer_id',  'customers.user_id', 'customers.location', 'customers.address','users.name','users.email', 'users.contact', 'customers.created_at', 'customers.updated_at')
+        ->get();
         return view('admin.customers.customers', ['customers' => $customers]);
     }
 

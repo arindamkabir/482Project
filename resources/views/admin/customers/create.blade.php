@@ -18,6 +18,10 @@
             <input type="contact" class="form-control" id="contact" name="contact" placeholder="Enter Your Contact Number">
         </div>
         <div class="form-group">
+            <label for="address">Customer Address</label>
+            <input type="address" class="form-control" id="address" name="address" placeholder="Enter Your Address">
+        </div>
+        <div class="form-group">
             <label for="password">Customer Password</label>
             <input type="password" class="form-control" id="password" name="password" placeholder="Enter Your Password">
         </div>

@@ -49,6 +49,7 @@ class CustomerController extends Controller
 
         DB::table('customers')->insert([
             "location" => $request->location,
+            "address" => $request->address,
             "user_id" => $id,
             'created_at' => date('Y-m-d H:i:s')
         ]);
