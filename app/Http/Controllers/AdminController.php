@@ -33,7 +33,7 @@ class AdminController extends Controller
     public function deliverymen(){
         $deliverymen = DB::table('delivery_man')
         ->join('users', 'delivery_man.user_id', '=', 'users.id')
-        ->select('delivery_man.dman_id',  'delivery_man.user_id', 'delivery_man.location', 'customers.address','users.name','users.email', 'users.contact', 'delivery_man.created_at', 'delivery_man.updated_at')
+        ->select('delivery_man.dman_id',  'delivery_man.user_id', 'delivery_man.location', 'users.name','users.email', 'users.contact', 'delivery_man.created_at', 'delivery_man.updated_at')
         ->get();
         return view('admin.deliveryman.deliveryman', ['deliverymen' => $deliverymen]);
     }
