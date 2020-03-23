@@ -34,8 +34,9 @@
             </div>
         </div>
       
-        @foreach($products as $product)
+        @foreach($products->chunk(3) as $chunk))
         <div class="row">
+            @foreach ($chunk as $product)
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="card h-100">
                 <a href="#"><img class="card-img-top" src="{{asset('images/' .  $product->image)}}" alt=""></a>
@@ -51,6 +52,7 @@
                 </div>
                 </div>
             </div>
+            @endforeach
         </div>
         @endforeach      
 </div>
