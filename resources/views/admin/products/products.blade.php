@@ -43,7 +43,7 @@
                 <td>{{$product->updated_at}}</td>
                 <td>
                 <form action="{{route('product.destroy', $product->product_id)}}" method="DELETE">
-                <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                <button type="submit" class="btn btn-danger"><i class="fas fa-dumpster"></i></button>
                 </form>
                 </td>
                 <td>
