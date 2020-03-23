@@ -29,6 +29,11 @@
         </thead>
         <tbody>
             @foreach($products as $product)
+            @foreach($shop_owners as $shopowner)
+                @if ($product->shop_id == $shopowner->shop_id)
+                    $so = $shopowner 
+                @endif
+            @endforeach
                 <tr>
                 <th scope="row">{{$product->product_id}}</th>
                 <td>{{$product->name}}</td>
