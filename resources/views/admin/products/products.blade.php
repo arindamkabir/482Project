@@ -15,6 +15,11 @@
             <tr class="">
             <th scope="col">ID</th>
             <th scope="col">Product Name</th>
+            <th scope="col">Product Image</th>
+            <th scope="col">Shop ID</th>
+            <th scope="col">Shop Name</th>
+            <th scope="col">Shop Location</th>
+            <th scope="col">Product Description</th>
             <th scope="col">In Stock</th>
             <th scope="col">Price</th>
             <th scope="col">Added</th>
@@ -32,12 +37,12 @@
                 <td>{{$product->created_at}}</td>
                 <td>{{$product->updated_at}}</td>
                 <td>
-                <form action="{{route('product.destroy', ['id' => $product->product_id])}}" method="DELETE">
+                <form action="{{route('product.destroy', $product->product_id)}}" method="DELETE">
                 <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
                 </form>
                 </td>
                 <td>
-                <form action="{{route('product.edit', ['id' => $product->product_id])}}" method="GET">
+                <form action="{{route('product.edit', $product->product_id)}}" method="GET">
                 <button type="submit" class="btn btn-info"><i class="far fa-edit"></i></button>
                 </form>
                 </td>
