@@ -36,7 +36,11 @@
             @endforeach
                 <tr>
                 <th scope="row">{{$product->product_id}}</th>
-                <td>{{$product->name}}</td>
+                <td><img src="images/{{$product->image}}" ></td>
+                <td>{{$so->shop_id}}</td>
+                <td>{{$so->shop_name}}</td>
+                <td>{{$so->location}}</td>
+                <td>{{$product->description}}</td>
                 <td>{{$product->stock}}</td>
                 <td>{{$product->price}}</td>
                 <td>{{$product->created_at}}</td>
