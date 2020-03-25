@@ -15,7 +15,9 @@ class DatabaseSeeder extends Seeder
         DB::table('users')->insert([
             [ 'name' => 'Ayon', 'email' => 'smunt@munni.com', 'password' => Hash::make('123456'), 'role' => '2', 'contact' => '1234567878', 'created_at' => date('Y-m-d H:i:s')],
             [ 'name' => 'Munni', 'email' => 'munty@munni.com', 'password' => Hash::make('123456'), 'role' => '2', 'contact' => '1234567878', 'created_at' => date('Y-m-d H:i:s')],
-        ]);
+            [ 'name' => 'Auro', 'email' => 'smt@mmun.com', 'password' => Hash::make('123456'), 'role' => '1', 'contact' => '1234567878', 'created_at' => date('Y-m-d H:i:s')],
+            [ 'name' => 'Munna', 'email' => 'mnty@munna.com', 'password' => Hash::make('123456'), 'role' => '3', 'contact' => '1234567878', 'created_at' => date('Y-m-d H:i:s')],
+            ]);
         DB::table('shop_owners')->insert([
             [ 'user_id' => '1', 'location' => 'Dhanmondi', 'shop_name' => 'Shwapno'],
             [ 'user_id' => '2', 'location' => 'Bashundhara', 'shop_name' => 'Meena Bazar'],
