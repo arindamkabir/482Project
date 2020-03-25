@@ -29,7 +29,7 @@ class DatabaseSeeder extends Seeder
             [ 'user_id' => '4', 'location' => 'Dhanmondi', 'created_at' => date('Y-m-d H:i:s')],
         ]);
         DB::table('products')->insert([
-            [ 'shop_id' => '1', 'name' => 'Maggi Noodles', 'image' => '1.jpg', 'description' => 'Maggi 2 minutes Noodles', 'price' => '17', 'stock' => '200'],
+            [ 'shop_id' => '1', 'name' => 'Maggi Noodles', 'image' => '1.jpg', 'description' => 'Maggi 2 minutes Noodles', 'price' => '17', 'stock' => '200', 'created_at' => date('Y-m-d H:i:s')],
         ]);
     }
 }
