@@ -28,5 +28,8 @@ class DatabaseSeeder extends Seeder
         DB::table('delivery_man')->insert([
             [ 'user_id' => '4', 'location' => 'Dhanmondi'],
         ]);
+        DB::table('products')->insert([
+            [ 'shop_id' => '1', 'name' => 'Maggi Noodles', 'image' => '1.jpg', 'description' => 'Maggi 2 minutes Noodles', 'price' => '17', 'stock' => '200'],
+        ]);
     }
 }
