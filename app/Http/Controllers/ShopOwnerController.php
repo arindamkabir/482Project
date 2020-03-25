@@ -33,7 +33,6 @@ class ShopOwnerController extends Controller
             "password" => Hash::make($request->password),
             "contact" => $request->contact,
             "role" => "2",
-            "isAdmin" => False,
             'created_at' => date('Y-m-d H:i:s')
         ]);
 
