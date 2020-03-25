@@ -22,5 +22,11 @@ class DatabaseSeeder extends Seeder
             [ 'user_id' => '1', 'location' => 'Dhanmondi', 'shop_name' => 'Shwapno'],
             [ 'user_id' => '2', 'location' => 'Bashundhara', 'shop_name' => 'Meena Bazar'],
         ]);
+        DB::table('customers')->insert([
+            [ 'user_id' => '3', 'location' => 'Dhanmondi', 'address' => 'H-42, R-9'],
+        ]);
+        DB::table('delivery_man')->insert([
+            [ 'user_id' => '4', 'location' => 'Dhanmondi'],
+        ]);
     }
 }
