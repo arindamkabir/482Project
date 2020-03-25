@@ -31,7 +31,7 @@ class DatabaseSeeder extends Seeder
         DB::table('products')->insert([
             [ 'shop_id' => '1', 'name' => 'Maggi Noodles', 'image' => '1.jpg', 'description' => 'Maggi 2 minutes Noodles', 'price' => '17', 'stock' => '200', 'created_at' => date('Y-m-d H:i:s')],
             [ 'shop_id' => '1', 'name' => 'Rice', 'image' => '2.jpg', 'description' => 'Rice 10tk/kg', 'price' => '10', 'stock' => '100', 'created_at' => date('Y-m-d H:i:s')],
-            [ 'shop_id' => '2', 'name' => 'ACI Salt', 'image' => '3.jpg', 'description' => 'ACI Salt', 'price' => '35', 'stock' => '200', 'created_at' => date('Y-m-d H:i:s')],
+            [ 'shop_id' => '2', 'name' => 'ACI Salt', 'image' => '3.png', 'description' => 'ACI Salt', 'price' => '35', 'stock' => '200', 'created_at' => date('Y-m-d H:i:s')],
             [ 'shop_id' => '2', 'name' => 'Pingle', 'image' => '5.jpg', 'description' => 'Small', 'price' => '120', 'stock' => '20', 'created_at' => date('Y-m-d H:i:s')],        
         ]);
     }
