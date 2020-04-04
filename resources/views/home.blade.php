@@ -46,6 +46,7 @@
                     </h4>
                     <h5>${{$product->price}}</h5>
                     <p class="card-text">{{$product->description}}</p>
+                    <button>Add to Cart</button>
                 </div>
                 <div class="card-footer">
                     <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
