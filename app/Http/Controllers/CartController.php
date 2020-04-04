@@ -36,8 +36,7 @@ class CartController extends Controller
     {
         Cart::setGlobalTax(0);
 
-
-        Cart::add(['id' => $request->id, 'name' => $request->name, 'qty' => $request->qty, 'price' => $request->price, 'weight' => 1]);
+        Cart::add(['id' => $request->product_id, 'name' => $request->name, 'qty' => $request->qty, 'price' => $request->price, 'weight' => 1]);
         return redirect()->route('cart.index')->with('success', 'Item successfully added to cart!');
 
     }

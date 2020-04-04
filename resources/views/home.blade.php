@@ -46,7 +46,17 @@
                     </h4>
                     <h5>${{$product->price}}</h5>
                     <p class="card-text">{{$product->description}}</p>
-                    <button type="button" class="btn btn-sm btn-primary">Add to Cart</button>
+                    <form action="{{route('cart.store')}}" method="POST">
+                        @csrf
+                        
+                        <input type="hidden" name="id" value="{{$product->product_id}}">
+                        <input type="hidden" name="price" value="{{$product->price}}">
+                        <input type="hidden" name="name" value="{{$product->name}}">
+                        <input type="hidden" name="qty" value="1">
+                        <button type="submit" class="btn btn-sm btn-primary">Add to Cart</button>
+                    </form>                                    
+                                    
+                
                 </div>
                 <div class="card-footer">
                     <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
