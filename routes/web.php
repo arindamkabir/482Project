@@ -25,6 +25,7 @@ Route::get('/admin/customers', 'AdminController@customers')->name('admin.custome
 Route::get('/admin/products', 'AdminController@products')->name('admin.products');
 Route::get('/admin/shopowners','AdminController@shopowners')->name('admin.shopowners');
 Route::get('/admin/deliverymen','AdminController@deliverymen')->name('admin.deliverymen');
+Route::get('/cart', 'CartController@index')->name('cart.index');
 // Route::get('/admin/doctors','AdminController@doctors')->name('admin.doctors')->middleware('isAdmin');
 
 
