@@ -71,7 +71,8 @@
             </div>
             @endforeach
         </div>
-        @endforeach      
+        @endforeach
+        <a class="btn btn-block btn-warning" href="{{route('product.index')}}">View All Products</a>
 </div>
 
 
