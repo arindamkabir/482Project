@@ -21,17 +21,7 @@ class CreateCartsTable extends Migration
             $table->integer('qty')->default(1);
             
             
-            $table->foreignId('product_id')
-            ->constrained()
-            ->onDelete('cascade');
 
-            $table->foreignId('order_id')
-            ->constrained()
-            ->onDelete('cascade');
-
-            $table->foreignId('user_id')
-            ->constrained()
-            ->onDelete('cascade');
           });
     }
 

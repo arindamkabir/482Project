@@ -32,7 +32,11 @@ class DatabaseSeeder extends Seeder
             [ 'shop_id' => '1', 'name' => 'Maggi Noodles', 'image' => '1.jpg', 'description' => 'Maggi 2 minutes Noodles', 'price' => '17', 'stock' => '200', 'created_at' => date('Y-m-d H:i:s')],
             [ 'shop_id' => '1', 'name' => 'Rice', 'image' => '2.jpg', 'description' => 'Rice 10tk/kg', 'price' => '10', 'stock' => '100', 'created_at' => date('Y-m-d H:i:s')],
             [ 'shop_id' => '2', 'name' => 'ACI Salt', 'image' => '3.png', 'description' => 'ACI Salt', 'price' => '35', 'stock' => '200', 'created_at' => date('Y-m-d H:i:s')],
-            [ 'shop_id' => '2', 'name' => 'Pingle', 'image' => '4.jpg', 'description' => 'Small', 'price' => '120', 'stock' => '20', 'created_at' => date('Y-m-d H:i:s')],        
+            [ 'shop_id' => '2', 'name' => 'Pringles', 'image' => '4.jpg', 'description' => 'Chips', 'price' => '120', 'stock' => '20', 'created_at' => date('Y-m-d H:i:s')],
+            [ 'shop_id' => '2', 'name' => 'Fresh Sugar', 'image' => '6.png', 'description' => 'Sugar', 'price' => '50', 'stock' => '20', 'created_at' => date('Y-m-d H:i:s')],        
+            [ 'shop_id' => '2', 'name' => 'Bombay Chanachur', 'image' => '7.jpeg', 'description' => 'Small', 'price' => '35', 'stock' => '20', 'created_at' => date('Y-m-d H:i:s')],        
+            [ 'shop_id' => '2', 'name' => 'Pran Sauce', 'image' => '6.jpeg', 'description' => 'Some sauce boss?', 'price' => '2', 'stock' => '20', 'created_at' => date('Y-m-d H:i:s')],        
+        
         ]);
     }
 }

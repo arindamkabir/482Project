@@ -10901,3 +10901,7 @@ a.text-dark:focus {
   overflow-y: auto;
 }
 
+.cart_quantity_icon {
+  padding: 0 1rem;
+}
+

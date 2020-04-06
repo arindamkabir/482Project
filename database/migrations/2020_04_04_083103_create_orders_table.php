@@ -24,9 +24,7 @@ class CreateOrdersTable extends Migration
             $table->boolean('seen_by_admin')->default(0);
             $table->timestamps();
 
-            $table->foreignId('user_id')
-            ->constrained()
-            ->onDelete('cascade');
+
         });
     }
 

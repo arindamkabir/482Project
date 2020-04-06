@@ -15,7 +15,7 @@
 @endif
 	<div class="row">
 		<div class="col-md-7">
-			<table class="table table-hover table-dark" >
+			<table class="table table-hover table-dark " >
 				<thead>
 				<tr class="">
 					<th scope="col">Product</th>
@@ -34,7 +34,7 @@
 						<p>{{$row->name}}</p>
 						<p>{{($row->options->has('size') ? $row->options->size : '')}}</p>
 					</th>
-					<td><i class="fas fa-minus"></i>{{$row->qty}}<i class="fas fa-plus"></i></td>
+					<td><span><i class="cart_quantity_icon fas fa-minus"></i></span>{{$row->qty}}<span><i class="cart_quantity_icon fas fa-plus"></i></span></td>
 					<td>{{$row->price}}</td>
 					<td>{{$row->subtotal}}</td>
 					</tr>
