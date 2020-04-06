@@ -15,9 +15,7 @@ class ShopOwnerController extends Controller
      */
     public function index()
     {
-        $shop_owners = DB::table('shop_owners')->get();
-
-        return view('shop_owner.shop_owners', ['shop_owners' => $shop_owners]);
+        return view('shopowner.home');
 
     }
 
