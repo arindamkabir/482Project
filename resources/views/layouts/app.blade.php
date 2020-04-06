@@ -23,7 +23,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-light shadow-sm fixed">
+        <nav class="navbar navbar-expand-md navbar-light bg-light shadow-sm sticky-top">
             <div class="container">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <div class="container">
