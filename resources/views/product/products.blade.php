@@ -38,7 +38,7 @@
                                         <input type="hidden" name="price" value="{{$prod->price}}">
                                         <input type="hidden" name="name" value="{{$prod->name}}">
                                         <input type="hidden" name="qty" value="1">
-                                        <button type="submit" class="btn"><i class="fas fa-shopping-cart"></i></button>
+                                        <button type="submit" class="btn btn-sm btn-primary">Add to Cart</button>
                                     </form>                                    
                                     
                                     </div>
