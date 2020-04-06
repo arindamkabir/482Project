@@ -23,7 +23,7 @@
             <div class="col-md-3">
                         <div class="card my-3 prod-card">
                             <div class="card-img">
-                                <img class="card-img-top" src="{{asset('assets/').'/'.$prod->name.'.jpg' }}" alt="Card image cap">
+                                <img class="card-img-top" src="{{asset('images/' .  $prod->image)}}" alt="Card image cap">
                                 <div class="prod-details">500g</div>
                             </div>
 
