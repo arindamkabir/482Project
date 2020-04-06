@@ -34,7 +34,7 @@
 						<p>{{$row->name}}</p>
 						<p>{{($row->options->has('size') ? $row->options->size : '')}}</p>
 					</th>
-					<td>{{$row->qty}}</td>
+					<td><i class="fas fa-minus"></i>{{$row->qty}}<i class="fas fa-plus"></i></td>
 					<td>{{$row->price}}</td>
 					<td>{{$row->subtotal}}</td>
 					</tr>
