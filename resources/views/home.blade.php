@@ -1,9 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
+<img src="{{asset('images/cover.jpg')}}" class="img-fluid" height="50vh" alt="Responsive image">
+
 <div class="container">
-<h3 class="home-heading text-center my-5 underline-from-center">Featured Products</h3>
-        <div class="row">
+
+        <!-- <div class="row">
             <div class="col">
                 <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
                     <ol class="carousel-indicators">
@@ -13,13 +15,13 @@
                     </ol>
                     <div class="carousel-inner" role="listbox">
                     <div class="carousel-item active">
-                        <img class="d-block img-fluid" src="{{asset('images/promo1.jpg')}}" alt="First slide">
+                        <img class="d-block img-fluid" src="{{asset('images/cover.jpg')}}" alt="First slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block img-fluid" src="{{asset('images/promo2.png')}}" alt="Second slide">
+                        <img class="d-block img-fluid" src="{{asset('images/cover.png')}}" alt="Second slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block img-fluid" src="{{asset('images/promo3.png')}}" alt="Third slide">
+                        <img class="d-block img-fluid" src="{{asset('images/cover.png')}}" alt="Third slide">
                     </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -32,7 +34,7 @@
                     </a>
                 </div>    
             </div>
-        </div>
+        </div> -->
       
         @foreach($products->chunk(3) as $chunk)
         <div class="row">
