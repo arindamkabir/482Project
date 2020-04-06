@@ -27,22 +27,16 @@ Route::get('/admin/shopowners','AdminController@shopowners')->name('admin.shopow
 Route::get('/admin/deliverymen','AdminController@deliverymen')->name('admin.deliverymen');
 
 Route::post('/orders/details', 'OrderController@details')->name('order.details');
-
 Route::get('/orders/waiting/{order_id}/{total}', function ($order_id,$total) {
 
     return view('order.waiting',['order_id'=>$order_id,'total'=>$total]);
 
 })->name('order.pending');
-
 Route::get('/orders/pastorders','OrderController@pastOrders')->name('order.past_orders');
-
-
 Route::resource('orders', 'OrderController');
 
 Route::resource('cart', 'CartController');
-
 Route::get('/checkout','CartController@checkout')->name('cart.checkout');
-
 Route::get('/cart','CartController@index')->name('cart.index');
 
 // Route::get('/admin/doctors','AdminController@doctors')->name('admin.doctors')->middleware('isAdmin');

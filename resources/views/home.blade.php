@@ -53,6 +53,7 @@
                         <input type="hidden" name="price" value="{{$product->price}}">
                         <input type="hidden" name="name" value="{{$product->name}}">
                         <input type="hidden" name="qty" value="1">
+                        <form action="{{route('product.show',['id' => $product->product_id])}}" method="GET">
                         <button type="submit" class="btn btn-sm btn-primary">Add to Cart</button>
                     </form>                                    
                                     
@@ -67,4 +68,13 @@
         </div>
         @endforeach      
 </div>
+
+ <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Bhaibhai store 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
 @endsection

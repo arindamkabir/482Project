@@ -60,7 +60,7 @@ class ProductController extends Controller
     }
 
     public function edit($id){
-        $medicine = DB::table('products')->where('product_id', $id)->first();
+        $product = DB::table('products')->where('product_id', $id)->first();
         return view('admin.products.edit', ['product' => $product]);
     }
 
@@ -87,7 +87,7 @@ class ProductController extends Controller
 
     //show a specific product
     public function show($id){
-        $medicine = DB::table('products')->where('product_id', $id)->first();
+        $product = DB::table('products')->where('product_id', $id)->first();
         return view('product.product', ['product' => $product]);
     }
 
