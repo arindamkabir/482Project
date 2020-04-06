@@ -23,7 +23,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-light shadow-sm">
             <div class="container">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <div class="container">
@@ -87,9 +87,16 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="pb-5">
             @yield('content')
         </main>
     </div>
+     <!-- Footer -->
+  <footer class="footer py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Bhaibhai store 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
 </body>
 </html>

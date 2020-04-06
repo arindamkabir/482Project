@@ -1,9 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-<img src="{{asset('images/cover.jpg')}}" class="img-fluid" height="50vh" alt="Responsive image">
+<div class="cover-home" style="background-image: url({{asset('images/cover.jpg')}});">
 
-<div class="container">
+</div>
+
+
+
+<div class="container pt-5">
+
+<div class="heading text-center py-4">Featured Products</div>
+
 
         <!-- <div class="row">
             <div class="col">
@@ -36,10 +43,10 @@
             </div>
         </div> -->
       
-        @foreach($products->chunk(3) as $chunk)
-        <div class="row">
+        @foreach($products->chunk(4) as $chunk)
+        <div class="row text-center">
             @foreach ($chunk as $product)
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-3 col-md-6 mb-4">
                 <div class="card h-100">
                 <a href="#"><img class="card-img-top" src="{{asset('images/' .  $product->image)}}" alt="" width="100%" height="100%"></a>
                 <div class="card-body">
@@ -60,9 +67,6 @@
                                     
                 
                 </div>
-                <div class="card-footer">
-                    <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                </div>
                 </div>
             </div>
             @endforeach
@@ -70,12 +74,6 @@
         @endforeach      
 </div>
 
- <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Bhaibhai store 2020</p>
-    </div>
-    <!-- /.container -->
-  </footer>
+
 
 @endsection

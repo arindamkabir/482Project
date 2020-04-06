@@ -10905,3 +10905,35 @@ a.text-dark:focus {
   padding: 0 1rem;
 }
 
+.cover-home {
+  width: 100%;
+  height: 100vh;
+}
+
+.footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+.heading {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 40vh -webkit-max-content 40vh;
+  grid-template-columns: 40vh max-content 40vh;
+  grid-template-rows: 20px 0;
+  grid-gap: 20px;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.heading:after,
+.heading:before {
+  content: " ";
+  display: block;
+  border-bottom: 1px solid gray;
+}
+

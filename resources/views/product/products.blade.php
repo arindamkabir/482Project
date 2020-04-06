@@ -17,38 +17,35 @@
 
     <h4 class="text-center page-heading">The largest inventory in the country!</h4>
 
-    @foreach($products->chunk(4) as $prods)
-    <div class="row">
-        @foreach($prods as $prod)
-            <div class="col-md-3">
-                        <div class="card my-3 prod-card">
-                            <div class="card-img">
-                                <img class="card-img-top" src="{{asset('images/' .  $prod->image)}}" width="200" alt="Card image cap">
-                                <div class="prod-details">500g</div>
-                            </div>
-
-
-                                <div class="card-body">
-                                    <h5 class="card-title text-center">{{$prod->name}}</h5>
+    @foreach($products->chunk(4) as $chunk)
+        <div class="row text-center">
+            @foreach ($chunk as $product)
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="{{asset('images/' .  $product->image)}}" alt="" width="100%" height="100%"></a>
+                <div class="card-body">
+                    <h4 class="card-title">
+                    <a href="{{route('product.show',$product->product_id)}}">{{$product->name}}</a>
+                    </h4>
+                    <h5>${{$product->price}}</h5>
+                    <p class="card-text">{{$product->description}}</p>
+                    <form action="{{route('cart.store')}}" method="POST">
+                        @csrf
+                        
+                        <input type="hidden" name="id" value="{{$product->product_id}}">
+                        <input type="hidden" name="price" value="{{$product->price}}">
+                        <input type="hidden" name="name" value="{{$product->name}}">
+                        <input type="hidden" name="qty" value="1">
+                        <button type="submit" class="btn btn-block btn-primary">Add to Cart</button>
+                    </form>                                    
                                     
-                                    <div class="d-flex justify-content-between px-4">
-                                    <form action="{{route('cart.store')}}" method="POST">
-                                        @csrf
-                                        <input type="hidden" name="id" value="{{$prod->product_id}}">
-                                        <input type="hidden" name="price" value="{{$prod->price}}">
-                                        <input type="hidden" name="name" value="{{$prod->name}}">
-                                        <input type="hidden" name="qty" value="1">
-                                        <button type="submit" class="btn btn-block btn-primary">Add to Cart</button>
-                                    </form>                                    
-                                    
-                                    </div>
-                                </div>
-                        </div>
+                
+                </div>
+                </div>
             </div>
-        @endforeach
-    </div>    
-    @endforeach
-
+            @endforeach
+        </div>
+        @endforeach   
 
 
 
