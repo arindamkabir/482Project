@@ -38,6 +38,7 @@ Route::resource('orders', 'OrderController');
 Route::resource('cart', 'CartController');
 Route::get('/checkout','CartController@checkout')->name('cart.checkout');
 Route::get('/cart','CartController@index')->name('cart.index');
+Route::get('/cartempty','CartController@empty')->name('cart.empty');
 
 // Route::get('/admin/doctors','AdminController@doctors')->name('admin.doctors')->middleware('isAdmin');
 

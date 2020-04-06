@@ -73,7 +73,7 @@
 				<form action="{{route('home')}}" class="align-self-end mx-2" method="GET">
 					<button type="submit" class="btn btn-sm btn-primary">Continue Shopping</button>
 				</form>
-				<form action="{{route('cart.destroy')}}" class="align-self-end mx-2" method="GET">
+				<form action="{{route('cart.empty')}}" class="align-self-end mx-2" method="GET">
 					<button type="submit" class="btn btn-sm btn-danger">Cancel</button>
 				</form>
 			</div>
