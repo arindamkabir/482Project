@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row my-5">
-        <div class="">
+        <div class="ml-auto">
             <h3 class="text-center"><strong>{{ $shop->shop_name }}</strong></h3>
         </div>
         <div class="ml-auto">

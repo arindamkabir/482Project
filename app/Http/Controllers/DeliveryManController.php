@@ -15,7 +15,7 @@ class DeliveryManController extends Controller
      */
     public function index()
     {
-
+        return view('deliveryman.home');
     }
 
     /**
