@@ -7,7 +7,7 @@
             <h3 class="text-center"><strong>{{ $shop->shop_name }}</strong></h3>
         </div>
         <div class="ml-auto">
-            <button type="submit" class="btn btn-outline-dark">Add New Product</button>  
+            <a href="{{route('shopowner.pcreate')}}"><button class="btn btn-primary ">Add New Product</button></a>
         </div>
     </div>
 

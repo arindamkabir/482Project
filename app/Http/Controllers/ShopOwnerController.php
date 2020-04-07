@@ -84,4 +84,46 @@ class ShopOwnerController extends Controller
 
     }
 
+    public function productcreate(){
+        $shop = DB::table('shop_owners')
+        ->join('users', 'shop_owners.user_id', '=', 'users.id')
+        ->select('shop_owners.shop_id')
+        ->where('users.id', \Auth::user()->id)
+        ->first();
+        $shop_id = $shop->shop_id;
+    
+        return view('shopowner.createproducts',['shop_id' => $shop_id]);
+
+    }
+
+    public function productstore(Request $request){
+
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+  
+        $imageName = time().'.'.$request->image->extension();  
+   
+        $request->image->move(public_path('images'), $imageName);
+   
+
+
+        DB::table('products')->insert(
+            [ 
+                'name' => $request->name,
+                'stock' => $request->stock,
+                'price' => $request->price,
+                'image' => $imageName,
+                'shop_id' => $request->shop_id,
+                'description' => $request->description,
+                'created_at' => date('Y-m-d H:i:s')
+            ]
+        );
+
+        return redirect()->route('shopowner.index')
+            ->with('success','You have successfully upload image.')
+            ->with('image',$imageName);;
+
+    }
+
 }

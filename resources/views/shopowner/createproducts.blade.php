@@ -1,22 +1,15 @@
-@extends('layouts.admin')
+@extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container my-5">
     <h4 class="text-center lead">Add a new product</h4>
-    <form method="POST" action="{{route('product.store')}}" enctype="multipart/form-data">
+    <form method="POST" action="{{route('shopowner.pstore')}}" enctype="multipart/form-data">
     @csrf
         <div class="form-group">
             <label for="name">Product Name</label>
             <input type="text" class="form-control" id="name" name="name" placeholder="Product Name">
         </div>
-        <div class="form-group">
-            <label for="shop_id">Example select</label>
-            <select class="form-control" id="shop_id" name="shop_id">
-            @foreach($shop_owners as $shop_owner)
-                <option value="{{$shop_owner->shop_id}}">{{$shop_owner->shop_name}}</option>
-            @endforeach
-            </select>
-        </div>
+        <input type="hidden" name="shop_id" value="{{$shop_id}}">
         <div class="form-group">
             <div class="custom-file">
                 <input type="file" class="custom-file-input" id="image" name="image">
