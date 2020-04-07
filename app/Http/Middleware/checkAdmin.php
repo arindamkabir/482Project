@@ -15,11 +15,11 @@ class checkAdmin
      */
     public function handle($request, Closure $next)
     {
-                if (\Auth::user()->isAdmin == true) {
+                if (\Auth::user()->isAdmin == false) {
                     return $next($request);
                 }
         
-                return redirect()->route('admin.dashboard'); // If user is not an admin.
+                return redirect()->route('home'); 
     }
         
 }

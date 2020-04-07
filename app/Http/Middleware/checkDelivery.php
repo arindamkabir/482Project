@@ -15,11 +15,13 @@ class checkDelivery
      */
     public function handle($request, Closure $next)
     {
-                if (\Auth::user()->role == '3' && isAdmin == false) {
-                    return $next($request);
+                if ((int)\Auth::user()->role !== 3) {
+                    return redirect()->route('home');
+
                 }
+                return $next($request);
+
         
-                return redirect()->route('deliveryman.index'); // If user is not an admin.
     }
         
 }

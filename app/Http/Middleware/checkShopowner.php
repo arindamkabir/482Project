@@ -15,11 +15,13 @@ class checkShopowner
      */
     public function handle($request, Closure $next)
     {
-                if (\Auth::user()->role == '2' && isAdmin == false) {
-                    return $next($request);
+                if ((int)\Auth::user()->role !== 2) {
+                    return redirect()->route('home');
+
                 }
+                return $next($request);
+
         
-                return redirect()->route('shopowner.index'); // If user is not an admin.
     }
         
 }

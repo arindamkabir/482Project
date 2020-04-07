@@ -15,9 +15,7 @@ class DeliveryManController extends Controller
      */
     public function index()
     {
-        $delivery_man = DB::table('delivery_man')->get();
 
-        return view('delivery_man.delivery_man', ['delivery_man' => $delivery_man]);
     }
 
     /**
