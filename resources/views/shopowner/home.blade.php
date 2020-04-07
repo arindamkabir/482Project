@@ -2,12 +2,12 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-md-8 mb-4 mt-4">
-            <h3><strong>{{ $shop->shop_name }}</strong></h3>
+    <div class="row my-5">
+        <div class="">
+            <h3 class="text-center"><strong>{{ $shop->shop_name }}</strong></h3>
         </div>
-        <div class="col-lg-4 col-md-4 mb-4 mt-4">
-            <button type="submit" class="btn btn-outline-dark">Add Product</button>  
+        <div class="ml-auto">
+            <button type="submit" class="btn btn-outline-dark">Add New Product</button>  
         </div>
     </div>
 
