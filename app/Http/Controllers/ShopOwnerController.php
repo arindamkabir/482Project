@@ -16,15 +16,19 @@ class ShopOwnerController extends Controller
      */
     public function index()
     {
-        $products_shops = DB::table('shop_owners')
+        $shop = DB::table('shop_owners')
+        ->join('users', 'shop_owners.user_id', '=', 'users.id')
+        ->select('shop_owners.shop_id','shop_owners.shop_name','shop_owners.location', 'shop_owners.user_id', 'shop_owners.location', 'shop_owners.shop_name','users.name','users.email', 'users.contact')
+        ->where('users.id', \Auth::user()->id)
+        ->first();
+        $products = DB::table('shop_owners')
         ->join('products', 'products.shop_id', '=', 'shop_owners.shop_id')
         ->join('users', 'shop_owners.user_id', '=', 'users.id')
-        ->select('products.product_id',  'shop_owners.shop_id', 'products.price', 'products.stock','products.description', 'products.image', 'products.name', 'products.created_at', 'products.updated_at','shop_owners.shop_name','shop_owners.location')
-        ->select('shop_owners.customer_id',  'shop_owners.user_id', 'shop_owners.location', 'shop_owners.shop_name','users.name','users.email', 'users.contact', 'shop_owners.created_at', 'shop_owners.updated_at')
-        ->where('users.user_id', \Auth::user()->id)
+        ->select('products.product_id', 'products.price', 'products.stock','products.description', 'products.image', 'products.name', 'products.created_at', 'products.updated_at')
+        ->where('users.id', \Auth::user()->id)
         ->get();
 
-        return view('shopowner.home', ['products' => $products_shops]);
+        return view('shopowner.home', ['products' => $products , 'shop' => $shop]);
 
     }
 
