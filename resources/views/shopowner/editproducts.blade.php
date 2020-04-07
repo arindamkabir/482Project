@@ -1,9 +1,9 @@
-@extends('layouts.admin')
+@extends('layouts.app')
 
 @section('content')
 <div class="container">
     <h4 class="text-center lead">Edit product</h4>
-    <form method="POST" action="{{route('product.update', ['id' => $product->product_id])}}">
+    <form method="POST" action="{{route('shopowner.pupdate', $product->product_id)}}">
     {{ method_field('PUT') }}
     @csrf
         <div class="form-row">

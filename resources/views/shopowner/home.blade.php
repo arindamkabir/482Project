@@ -3,8 +3,8 @@
 @section('content')
 <div class="container">
     <div class="row my-5">
-        <div class="ml-auto">
-            <h3 class="text-center"><strong>{{ $shop->shop_name }}</strong></h3>
+        <div class="mr-auto">
+            <h3 class=""><strong>{{ $shop->shop_name }}</strong></h3>
         </div>
         <div class="ml-auto">
             <a href="{{route('shopowner.pcreate')}}"><button class="btn btn-primary ">Add New Product</button></a>
@@ -24,7 +24,15 @@
                 <h5>${{$product->price}}</h5>
                 <p class="card-text">{{$product->description}}</p>
                 <p class="card-text">Stock available: {{$product->stock}}</p>
-                <button type="submit" class="btn btn-block btn-outline-primary" style="float:right;">Edit</button>  
+
+                
+                <form action="{{route('shopowner.pedit', $product->product_id)}}" method="GET">
+                <button type="submit" class="btn btn-outline-success btn-block my-3"><i class="far fa-edit"></i>  EDIT</button>
+                </form>
+                
+                <form action="{{route('shopowner.pdestroy', $product->product_id)}}" method="DELETE">
+                <button type="submit" class="btn btn-outline-danger btn-block my-3"><i class="fas fa-dumpster"></i>  DELETE</button>
+                </form>
                    
             
             </div>

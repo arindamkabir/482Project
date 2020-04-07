@@ -92,7 +92,7 @@ class ShopOwnerController extends Controller
         ->first();
         $shop_id = $shop->shop_id;
     
-        return view('shopowner.createproducts',['shop_id' => $shop_id]);
+        return view('shopowner.createproduct',['shop_id' => $shop_id]);
 
     }
 
@@ -125,5 +125,37 @@ class ShopOwnerController extends Controller
             ->with('image',$imageName);;
 
     }
+
+
+    public function productedit($id){
+        $product = DB::table('products')->where('product_id', $id)->first();
+        return view('shopowner.editproducts', ['product' => $product]);
+    }
+
+
+    public function productupdate($id, Request $request){
+        DB::table('products')
+            ->where('product_id', $id)
+            ->update(
+                [
+                    'name' => $request->name,
+                    'stock' => $request->stock,
+                    'price' => $request->price
+                ]
+        );
+
+        return redirect()->route('shopowner.index');
+
+    }
+
+
+    public function productdestroy($id){
+
+        DB::table('products')->where('product_id', $id)->delete();
+        return redirect()->route('shopowner.index');
+
+        
+    }
+
 
 }

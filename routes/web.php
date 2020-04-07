@@ -17,8 +17,11 @@ Route::get('/', 'HomeController@index')->name('home')->middleware('home');;
 
 Route::resource('customer', 'CustomerController');
 Route::resource('shopowner', 'ShopOwnerController')->middleware('shopowner');
-Route::get('/shopowner/products/create', 'ShopOwnerController@productcreate')->name('shopowner.pcreate')->middleware('shopowner');;
-Route::post('/shopowner/products/', 'ShopOwnerController@productstore')->name('shopowner.pstore')->middleware('shopowner');;
+Route::get('/shopowner/products/create', 'ShopOwnerController@productcreate')->name('shopowner.pcreate')->middleware('shopowner');
+Route::post('/shopowner/products/', 'ShopOwnerController@productstore')->name('shopowner.pstore')->middleware('shopowner');
+Route::get('/shopowner/products/{product}/edit', 'ShopOwnerController@productedit')->name('shopowner.pedit')->middleware('shopowner');
+Route::put('/shopowner/products/{product}', 'ShopOwnerController@productupdate')->name('shopowner.pupdate')->middleware('shopowner');
+Route::delete('/shopowner/products/{product}', 'ShopOwnerController@productdestroy')->name('shopowner.pdestroy')->middleware('shopowner');
 
 Route::resource('product', 'ProductController');
 Route::resource('deliveryman', 'DeliveryManController');
