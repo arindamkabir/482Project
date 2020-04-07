@@ -10937,3 +10937,7 @@ a.text-dark:focus {
   border-bottom: 1px solid gray;
 }
 
+.searchbar input[type=text] {
+  width: 430px !important;
+}
+
