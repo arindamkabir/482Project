@@ -4,7 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 
-class isAdmin
+class checkDelivery
 {
     /**
      * Handle an incoming request.
@@ -15,11 +15,11 @@ class isAdmin
      */
     public function handle($request, Closure $next)
     {
-                if (\Auth::user()->isAdmin == false) {
+                if (\Auth::user()->role == '3' && isAdmin == false) {
                     return $next($request);
                 }
         
-                return redirect()->route('home'); // If user is not an admin.
+                return redirect()->route('deliveryman.index'); // If user is not an admin.
     }
         
 }
