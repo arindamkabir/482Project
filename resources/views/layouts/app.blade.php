@@ -34,9 +34,9 @@
                 <!-- {{ config('app.name', 'BHAI BHAI STORE') }} -->
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                     
-                    <form class="form-inline searchbar my-2 my-lg-0 ml-auto">
+                    <form class="searchbar my-2 my-lg-0 ml-auto">
                         <div class="input-group">
-                            <input type="text " class="form-control" width="900" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2">
+                            <input type="text " class="form-control" width="900" placeholder="Search for groceries" aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
                                 <button class="btn btn-warning flex-grow" type="submit"><i class="fas fa-search" ></i></button>
                             </div>

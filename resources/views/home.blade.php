@@ -9,7 +9,7 @@
 
 <div class="container pt-5">
 
-<div class="heading text-center py-4">Featured Products</div>
+<h1 class="heading text-center py-4">Featured Products</h1>
 
 
         <!-- <div class="row">

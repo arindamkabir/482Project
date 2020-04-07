@@ -15,7 +15,7 @@
     @endif
 
 
-    <h4 class="text-center page-heading">The largest inventory in the country!</h4>
+    <h1 class="heading text-center py-4">The largest inventory in the country!</h1>
 
     @foreach($products->chunk(4) as $chunk)
         <div class="row text-center">
