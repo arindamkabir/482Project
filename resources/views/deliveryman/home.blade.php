@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row my-5">
         <div class="">
-            <h3><strong>DeliveryMan Name</strong></h3>
+            <h3><strong>DeliveryMan</strong></h3>
         </div>
         <div class="ml-auto">
             <button type="submit" class="btn btn-outline-dark">History</button>  
