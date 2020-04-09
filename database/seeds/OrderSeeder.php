@@ -10,7 +10,8 @@ class OrderSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
+    {   
+        DB::table('orders')->insert([
         'user_id'=> 3 ,
         'contact' => '01712141516',
         'email' => 'chuchu@da.com',
@@ -18,5 +19,6 @@ class OrderSeeder extends Seeder
         'is_paid' => '0',
         'is_completed' => '0',
         'seen_by_admin' => '0',
+        ]);
     }
 }
