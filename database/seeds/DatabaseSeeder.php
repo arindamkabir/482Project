@@ -39,15 +39,5 @@ class DatabaseSeeder extends Seeder
         
             ]);
         
-        DB::table('orders')->insert([
-       [ 'user_id'=> '3' , 'contact' => '01712141516', 'email' => 'chuchu@da.com', 'shipping_address' => '2/6, Shyamoli, Dhaka', 'created_at' => date('Y-m-d H:i:s') ], 
-       [ 'user_id'=> '4' , 'contact' => '01712141516', 'email' => 'huchu@da.com', 'shipping_address' => '2/6, Dhanmondi, Dhaka', 'created_at' => date('Y-m-d H:i:s') ], 
-       [ 'user_id'=> '6' , 'contact' => '01712141516', 'email' => 'cchu@da.com', 'shipping_address' => '2/6, Mirpur, Dhaka', 'created_at' => date('Y-m-d H:i:s')], 
-       [ 'user_id'=> '2' , 'contact' => '01712141516', 'email' => 'chuhu@da.com', 'shipping_address' => '2/6, Banani, Dhaka', 'created_at' => date('Y-m-d H:i:s')], 
-       [ 'user_id'=> '7' , 'contact' => '01712141516', 'email' => 'chchu@da.com', 'shipping_address' => '2/6, Banasree, Dhaka', 'created_at' => date('Y-m-d H:i:s')], 
-       
-       ]);
- 
- 
    }
 }
