@@ -70,22 +70,7 @@ class OderController extends Controller
     }
 
 
-    public function pastOrders(){
 
-        $orders = DB::table('orders')
-        ->where('user_id', \Auth::id())
-        ->get();    
-        // dd($orders);
-
-        $order_products = DB::table('orders')
-        ->join('order_products', 'orders.order_id', '=', 'order_products.order_id')
-        ->join('products', 'products.product_id', '=', 'order_products.product_id')
-        ->select('products.price',  'products.name', 'products.product_id', 'order_product.quantity','orders.user_id', 'orders.total', 'orders.order_id')
-        ->where('user_id' , \Auth::id())
-        ->get();
-
-        return view('order.past_orders', ['orders' => $orders, 'order_products' => $order_products]);
-    }
 
 
 

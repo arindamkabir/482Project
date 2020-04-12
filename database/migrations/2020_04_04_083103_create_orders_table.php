@@ -17,7 +17,7 @@ class CreateOrdersTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedInteger('user_id');
             $table->string('total');
-            $table->string('order_status')->default('pending');
+            $table->string('order_status')->default('paid');
             $table->timestamps();
 
 
