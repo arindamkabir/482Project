@@ -12,7 +12,9 @@
         </div>
     </div>
 
+    @foreach($orders->chunk(4) as $chunk)
     <div class="row">
+        @foreach ($chunk as $order)
         <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">                
                 <div class="card-body">
@@ -24,8 +26,9 @@
                 <div>          
             </div>
         </div>
+        @endforeach
     </div>
-
+    @endforeach
 </div>
 
 @endsection
