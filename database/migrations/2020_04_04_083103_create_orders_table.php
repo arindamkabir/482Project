@@ -16,12 +16,8 @@ class CreateOrdersTable extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedInteger('user_id');
-            $table->string('contact');
-            $table->string('email');
-            $table->text('shipping_address');
-            $table->boolean('is_paid')->default(0);
-            $table->boolean('is_completed')->default(0);
-            $table->boolean('seen_by_admin')->default(0);
+            $table->string('total');
+            $table->string('order_status')->default('pending');
             $table->timestamps();
 
 

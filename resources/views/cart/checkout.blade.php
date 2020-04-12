@@ -13,7 +13,7 @@
     {{ session('error') }}
 </div>
 @endif
-    <h4 class="page-heading">Payment Successful</h4>
+    <h4 class="page-heading">Check out successful yo!</h4>
   
 
 

@@ -42,7 +42,7 @@ Route::get('/orders/pastorders','OrderController@pastOrders')->name('order.past_
 Route::resource('orders', 'OrderController');
 
 Route::resource('cart', 'CartController');
-Route::get('/checkout','CartController@checkout')->name('cart.checkout');
+Route::get('/checkout','OrderController@store')->name('cart.checkout');
 Route::get('/cart','CartController@index')->name('cart.index');
 Route::get('/cartempty','CartController@empty')->name('cart.empty');
 

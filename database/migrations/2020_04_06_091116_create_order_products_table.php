@@ -17,6 +17,7 @@ class CreateOrderProductsTable extends Migration
             $table->integer('order_id');
             $table->integer('product_id');
             $table->integer('quantity');
+            
         });
     }
 
