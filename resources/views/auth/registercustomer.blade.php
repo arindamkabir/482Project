@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card" style="margin:5%;">
-                <div class="card-header">{{ __('Register') }}</div>
+                <div class="card-header">{{ __('Register Customer') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -58,25 +58,6 @@
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="whoyourare" class="col-md-4 col-form-label text-md-right">{{ __('Role') }}</label>
-
-                            <div class="col-md-6">
-                            <select class="custom-select">
-                                <option selected>Select Your Role</option>
-                                <option value="1">Customer</option>
-                                <option value="2">Shop-Owner</option>
-                                <option value="3">Delivery Boy</option>
-                            </select>
-
-                                @error('role')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
                             </div>
                         </div>
 
