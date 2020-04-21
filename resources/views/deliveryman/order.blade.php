@@ -3,16 +3,10 @@
 @section('content')
 
 <div class="container">
-    <div class="row my-5">
-        <div class="">
-            <h3><strong>DeliveryMan</strong></h3>
-        </div>
-    </div>
-
-
-    <div class="card">
-        <div class="card-head">
-            <h4><strong>Order Number: {{$order->order_id}}<h4>
+  
+    <div class="card" style="margin:5%;">
+        <div class="card-header">
+           <h5><strong> Order Number: {{$order->order_id}} </strong></h5>
         </div>
 
 
@@ -20,17 +14,18 @@
             <div class="row">
 
                 <div class = "col-md-4 mt-4 card pr-3">
-                    <p>Customer Name: {{$order->name}}</p>
-                    <p>Location: {{$order->location}}</p>
-                    <p>Contact: {{$order->contact}}</p>
-                    <p>Total Amount: {{$order->total}}</p>
+                    <p class="card-text"><strong>Customer Name:</strong> {{$order->name}}</p>
+                    <p class="card-text"><strong>Location:</strong> {{$order->location}}</p>
+                    <p class="card-text"><strong>Contact:</strong> {{$order->contact}}</p>
+                    <p class="card-text"><strong>Total Amount: <span style="color:red;">{{$order->total}} taka (including VAT)</span></strong> </p>
                 </div>
 
                 <div class = "col-md-8 mt-4 card pr-3">
-                    <table class="table table-hover table-dark " >
+                    <table class="table table-striped" >
                         <thead>
                             <tr class="">
                                 <th scope="col">Product</th>
+                                <th scope="col">Quantity</th>
                                 <th scope="col">Price</th>
                                 <th scope="col">Shop Name</th>
                                 <th scope="col">Location</th>
@@ -42,6 +37,7 @@
 
                             <tr class="">
                             <td>{{$row->name}}</td>
+                            <td>{{$row->quantity}}</td>
                             <td>{{$row->price}}</td>
                             <td>{{$row->shop_name}}</td>
                             <td>{{$row->location}}</td>
@@ -57,7 +53,7 @@
 
                 <div class="d-flex flex-row justify-content-center my-4">	
                     <form action="{{route('cart.empty')}}" class="align-self-end mx-2" method="GET">
-                        <button type="submit" class="btn btn-sm btn-danger">Deliver</button>
+                        <button type="submit" class="btn btn-sm btn-primary">Deliver</button>
                     </form>
 			    </div>
 
