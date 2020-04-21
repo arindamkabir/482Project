@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
-class OderController extends Controller
+use DB;
+use Cart;
+class OrderController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -39,7 +40,6 @@ class OderController extends Controller
         $data = DB::table('orders')->insert(
             [ 
                 'user_id' => \Auth::id(),
-                'pay_method' =>  $request->pay_method,
                 'total' => Cart::total(),
                 'created_at' => date('Y-m-d H:i:s')
             ]
@@ -62,11 +62,7 @@ class OderController extends Controller
         Cart::destroy();
 
 
-        return redirect()->route('order.pending',
-        [
-            'order_id' => $order_id, 
-            'total' => $total
-        ]); 
+        return view('cart.checkout');
     }
 
 
