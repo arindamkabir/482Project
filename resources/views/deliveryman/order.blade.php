@@ -12,7 +12,7 @@
 
     <div class="card">
         <div class="card-head">
-            <h4><strong>OrderNumber<h4>
+            <h4><strong>Order Number: {{$order->order_id}}<h4>
         </div>
 
 
@@ -20,10 +20,10 @@
             <div class="row">
 
                 <div class = "col-md-4 mt-4 card prod-img-section pr-3">
-                    <p>Customer Name</p>
-                    <p>Location</p>
-                    <p>Contact</p>
-                    <p>Total Amount</p>
+                    <p>Customer Name: {{order->name}}</p>
+                    <p>Location: {{order->location}}</p>
+                    <p>Contact: {{order->contact}}</p>
+                    <p>Total Amount: {{order->total}}</p>
                 </div>
 
                 <div class = "col-md-8 mt-4 card prod-img-section pr-3">
