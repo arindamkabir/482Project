@@ -67,7 +67,7 @@
 
 
 			<div class="d-flex flex-row justify-content-center my-4">	
-				<form action="{{route('order.store')}}" class="align-self-start mx-2" method="GET">
+				<form action="{{route('cart.checkout')}}" class="align-self-start mx-2" method="GET">
 					<button type="submit" class="btn btn-sm btn-primary">Proceed To Checkout</button>
 				</form>
 				<form action="{{route('home')}}" class="align-self-end mx-2" method="GET">
