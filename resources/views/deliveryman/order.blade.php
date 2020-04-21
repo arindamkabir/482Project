@@ -51,7 +51,7 @@
                 </div>
 
 
-                <div class="d-flex flex-row justify-content-center my-4">	
+                <div class="d-flex flex-row justify-content-center my-4 ml-auto">	
                     <form action="{{route('cart.empty')}}" class="align-self-end mx-2" method="GET">
                         <button type="submit" class="btn btn-sm btn-primary">Deliver</button>
                     </form>
