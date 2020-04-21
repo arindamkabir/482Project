@@ -22,14 +22,12 @@
             <div class="col-md-3">
                 <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Order Number:  {{$order->order_id}}</h4>
+                    <a href="{{route('deliveryman.show_order',$order->order_id)}}"><h4 class="card-title">Order Number:  {{$order->order_id}}</h4></a>
                     <p class="card-text">Customer Location: {{$order->location}}</p>
                     <p class="card-text">Total Amount: Taka {{$order->total}}</p>
 
-                    <form action="{{route('cart.store')}}" method="POST">
+                    <form action="{{route('deliveryman.show_order', $order->order_id)}}" method="GET">
                         @csrf
-                        
-                        <input type="hidden" name="id" value="{{$order->order_id}}">
                         <button type="submit" class="btn btn-block btn-primary">Take Order</button>
                     </form>   
                 </div>

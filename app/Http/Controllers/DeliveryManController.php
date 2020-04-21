@@ -119,4 +119,8 @@ class DeliveryManController extends Controller
     {
         //
     }
+
+    public function show_order($id){
+    }
+
 }
