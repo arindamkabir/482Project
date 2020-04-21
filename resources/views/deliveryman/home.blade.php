@@ -12,13 +12,13 @@
         </div>
     </div>
 
-    @foreach($orders_pending->chunk(4) as $chunk)
+    @foreach($orders->chunk(4) as $chunk)
     <div class="row">
         @foreach ($chunk as $order)
         <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">                
                 <div class="card-body">
-                    <h4 class="card-title">Order Number:  {{$order->order_id}}</h4>
+                    <h4 class="card-title">Order Number</h4>
                     <p class="card-text">Customer Location</p>
                     <p class="card-text">Shop Name</p> 
                     <p class="card-text">Total Price</p>
