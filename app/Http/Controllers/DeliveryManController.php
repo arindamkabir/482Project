@@ -15,7 +15,15 @@ class DeliveryManController extends Controller
      */
     public function index()
     {
-        return view('deliveryman.home');
+        $orders_pending = DB::table('orders')               
+        ->join('users', 'orders.user_id', '=', 'users.id')
+        ->join('customers', 'customers.user_id', '=', 'users.id')
+        ->join('shop_owners', 'shop_owners.shop_id', '=', 'orders.shop_id')
+        ->select('orders.order_id', 'orders.user_id','orders.user_id', 'shop_owners.shop_name', 'customers.location', 'customers.address', 'customers.customer_id', 'orders.total', 'orders.order_status')
+        ->where('order_status', 'paid')
+        ->get();
+
+        return view('deliveryman.home', ['orders_pending' => $orders_pending]);
     }
 
     /**
