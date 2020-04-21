@@ -15,7 +15,7 @@
     @endif
 
 
-    <h1 class="heading text-center py-4">Number of results found</h1>
+    <h1 class="heading text-center py-4">Number of results found : {{$number_results}}</h1>
 
     @foreach($products->chunk(4) as $chunk)
         <div class="row text-center">

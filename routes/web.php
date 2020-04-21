@@ -14,6 +14,7 @@
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home')->middleware('home');;
+Route::post('/search', 'ProductController@search')->name('search');
 
 Route::resource('customer', 'CustomerController');
 Route::resource('shopowner', 'ShopOwnerController')->middleware('shopowner');
