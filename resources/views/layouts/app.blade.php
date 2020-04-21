@@ -34,16 +34,14 @@
                 <!-- {{ config('app.name', 'BHAI BHAI STORE') }} -->
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                     
-                    <form class="searchbar my-2 my-lg-0 ml-auto">
+                    <form class="searchbar my-2 my-lg-0 ml-auto" action="{{route('search')}}" method="POST">
+                    @csrf
                         <div class="input-group">
-                            <form action="{{route('search')}}" method="POST">
-                                @csrf
+                                
                                 <input name="term" type="text" class="form-control" width="900" placeholder="Search for groceries" aria-label="Search" aria-describedby="basic-addon2">
                                 <div class="input-group-append">
                                     <button class="btn btn-warning flex-grow" type="submit"><i class="fas fa-search" ></i></button>
                                 </div>
-                            </form>                                    
-
                         </div>
                     </form>
                     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">

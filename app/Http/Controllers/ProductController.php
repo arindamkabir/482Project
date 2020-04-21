@@ -19,9 +19,9 @@ class ProductController extends Controller
 
     public function search(Request $request){
         $searchTerm = $request->term;
-        $products = DB::table('prodcuts')   
+        $products = DB::table('products')   
         ->where('name', 'LIKE', "%{$searchTerm}%") 
-        ->orWhere('email', 'LIKE', "%{$searchTerm}%") 
+        ->orWhere('description', 'LIKE', "%{$searchTerm}%") 
         ->get();
 
         return view('search',['products' => $products, 'number_results' => $products->count()]);
