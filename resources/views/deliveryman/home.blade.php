@@ -12,23 +12,38 @@
         </div>
     </div>
 
+
+
+
     @foreach($orders_pending->chunk(4) as $chunk)
-    <div class="row">
-        @foreach ($chunk as $order)
-        <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">                
+        <div class="row text-center">
+            @foreach ($chunk as $order)
+
+            <div class="col-md-3">
+                <div class="card">
                 <div class="card-body">
                     <h4 class="card-title">Order Number:  {{$order->order_id}}</h4>
-                    <p class="card-text">Customer Location</p>
-                    <p class="card-text">Shop Name</p> 
-                    <p class="card-text">Total Price</p>
-                    <button type="submit" class="btn btn-block btn-primary">Take Order</button>
-                <div>          
+                    <p class="card-text">Customer Location: {{$order->location}}</p>
+                    <p class="card-text">Total Amount: Taka {{$order->total}}</p>
+
+                    <form action="{{route('cart.store')}}" method="POST">
+                        @csrf
+                        
+                        <input type="hidden" name="id" value="{{$order->order_id}}">
+                        <button type="submit" class="btn btn-block btn-primary">Take Order</button>
+                    </form>   
+                </div>
+                </div>
             </div>
+            @endforeach
         </div>
         @endforeach
-    </div>
-    @endforeach
+
+
+
+
+
+
 </div>
 
 @endsection
