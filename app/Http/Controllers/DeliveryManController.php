@@ -126,14 +126,14 @@ class DeliveryManController extends Controller
         ->join('users', 'orders.user_id', '=', 'users.id')
         ->join('customers', 'customers.user_id', '=', 'users.id')
         ->select('orders.order_id', 'users.name', 'users.contact', 'customers.location', 'customers.address', 'customers.customer_id', 'orders.total', 'orders.order_status')
-        ->where('order_id', $id)
+        ->where('orders.order_id', $id)
         ->first();
 
         $products = DB::table('orders')
         ->join('order_products', 'orders.order_id', '=', 'order_products.order_id')
         ->join('products', 'products.product_id', '=', 'order_products.product_id')
         ->select('orders.order_id', 'products.product_id', 'products.shop_id', 'products.name', 'products.price')
-        ->where('order_id', $id)
+        ->where('orders.order_id', $id)
         ->get();
 
         return view('deliveryman.order', ['order' => $order, 'products'=> $products]);
