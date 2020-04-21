@@ -19,26 +19,37 @@
         <div class="card-body">
             <div class="row">
 
-                <div class = "col-md-4 mt-4 card prod-img-section pr-3">
-                    <p>Customer Name: {{order->name}}</p>
-                    <p>Location: {{order->location}}</p>
-                    <p>Contact: {{order->contact}}</p>
-                    <p>Total Amount: {{order->total}}</p>
+                <div class = "col-md-4 mt-4 card pr-3">
+                    <p>Customer Name: {{$order->name}}</p>
+                    <p>Location: {{$order->location}}</p>
+                    <p>Contact: {{$order->contact}}</p>
+                    <p>Total Amount: {{$order->total}}</p>
                 </div>
 
-                <div class = "col-md-8 mt-4 card prod-img-section pr-3">
+                <div class = "col-md-8 mt-4 card pr-3">
                     <table class="table table-hover table-dark " >
                         <thead>
                             <tr class="">
                                 <th scope="col">Product</th>
-                                <th scope="col">Quantity</th>
                                 <th scope="col">Price</th>
                                 <th scope="col">Shop Name</th>
                                 <th scope="col">Location</th>
-                                <th scope="col">Subtotal</th>
                                 </tr>
                         </thead>
                         <tbody>
+                        @foreach($products as $row)
+
+
+                            <tr class="">
+                            <td>{{$row->name}}</td>
+                            <td>{{$row->price}}</td>
+                            <td>{{$row->shop_name}}</td>
+                            <td>{{$row->location}}</td>
+                            </tr>
+
+
+                            @endforeach
+
                         </tbody>
                     </table>
                 </div>

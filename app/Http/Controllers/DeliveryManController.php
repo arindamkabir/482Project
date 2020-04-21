@@ -132,7 +132,8 @@ class DeliveryManController extends Controller
         $products = DB::table('orders')
         ->join('order_products', 'orders.order_id', '=', 'order_products.order_id')
         ->join('products', 'products.product_id', '=', 'order_products.product_id')
-        ->select('orders.order_id', 'products.product_id', 'products.shop_id', 'products.name', 'products.price')
+        ->join('shop_owners', 'products.shop_id', '=', 'shop_owners.shop_id')
+        ->select('orders.order_id', 'products.product_id', 'products.shop_id', 'products.name', 'products.price', 'shop_owners.location', 'shop_owners.shop_name')
         ->where('orders.order_id', $id)
         ->get();
 
