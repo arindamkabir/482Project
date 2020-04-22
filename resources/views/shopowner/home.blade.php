@@ -30,7 +30,7 @@
                 <button type="submit" class="btn btn-outline-success btn-block my-3"><i class="far fa-edit"></i>  EDIT</button>
                 </form>
                 
-                <form action="{{route('shopowner.pdestroy', $product->product_id)}}" method="DELETE">
+                <form action="{{route('shopowner.pdestroy', $product->product_id)}}" method="GET">
                 <button type="submit" class="btn btn-outline-danger btn-block my-3"><i class="fas fa-dumpster"></i>  DELETE</button>
                 </form>
                    
