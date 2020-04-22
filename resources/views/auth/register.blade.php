@@ -76,9 +76,9 @@
 
 
         
-            <a href="{{route('cus_reg')}}" type="button" class="cus-btn">Customer</a>
-            <a href="{{route('shp_reg')}}" type="button" class="shp-btn">Shop</a>
-            <a href="{{route('deli_reg')}}" type="button" class="deli-btn">Delivery Man</a>
+            <a href="{{route('cus_reg')}}" type="button" class="cus-btn mr-5">Customer</a>
+            <a href="{{route('shp_reg')}}" type="button" class="shp-btn mr-5">Shop</a>
+            <a href="{{route('deli_reg')}}" type="button" class="deli-btn mr-5">Delivery Man</a>
 
     </div>
 </div>
