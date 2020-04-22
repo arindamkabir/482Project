@@ -74,4 +74,3 @@ Route::get('/login', function () {
 
 })->name('login');
 
-Route::get('/home', 'HomeController@index')->name('home');

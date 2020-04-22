@@ -7,7 +7,12 @@
 
 // Bootstrap
 @import "~bootstrap/scss/bootstrap";
-
+body{
+    min-height: 100vh;
+    position: relative;
+    margin: 0;
+    padding-bottom: 200px;
+}
 .sidebar {
     .nav-link {
         color: #fff !important;
@@ -37,8 +42,7 @@
 }
 
 .footer {
-    position: relative;
-    left: 0;
+    position: absolute;
     bottom: 0;
     width: 100%;
     color: white;
