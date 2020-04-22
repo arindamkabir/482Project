@@ -19,26 +19,27 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
 </head>
 <body>
     <div id="app">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top justify-content-center">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top justify-content-center">
+            <div class="container">
+            
+            
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
                 <a class="navbar-brand" href="{{route('home')}}">BHAI BHAI STORE</a>
                 <!-- {{ config('app.name', 'BHAI BHAI STORE') }} -->
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-
-                    <form class="searchbar my-2 my-lg-0 ml-auto" action="{{route('search')}}" method="POST">
-                    @csrf
+                    
+                    <form class="searchbar my-2 my-lg-0 ml-auto">
                         <div class="input-group">
-
-                                <input name="term" type="text" class="form-control" width="900" placeholder="Search for groceries" aria-label="Search" aria-describedby="basic-addon2">
-                                <div class="input-group-append">
-                                    <button class="btn btn-warning flex-grow" type="submit"><i class="fas fa-search" ></i></button>
-                                </div>
+                            <input type="text " class="form-control" width="900" placeholder="Search for groceries" aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-warning flex-grow" type="submit"><i class="fas fa-search" ></i></button>
+                            </div>
                         </div>
                     </form>
                     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
@@ -62,18 +63,27 @@
                                     onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
+                                </a>
 
-                               
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                                </form>
+                            </div>
+                        </li>
+                    @endguest
                     </ul>
                 </div>
+            
+            
             </div>
         </nav>
+
+
+
+
+
+
+
 
         <main class="pb-5">
             @yield('content')

@@ -11,8 +11,6 @@
 |
 */
 
-Auth::routes();
-
 Route::get('/', 'HomeController@index')->name('home')->middleware('home');;
 Route::any('/search', 'ProductController@search')->name('search');
 
