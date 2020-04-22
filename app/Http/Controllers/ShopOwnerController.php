@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 use App\User;
 use DB;
 
@@ -38,6 +39,8 @@ class ShopOwnerController extends Controller
     }
 
     public function store(Request $request){
+
+
         DB::table('users')->insert([
             "name" => $request->owner_name,
             "email" => $request->email,

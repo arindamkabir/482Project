@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use DB;
 
 class HomeController extends Controller
 {
@@ -24,8 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $products = DB::table('products')->get();
-
-        return view('home', ['products' => $products]);
+        return view('home');
     }
 }
