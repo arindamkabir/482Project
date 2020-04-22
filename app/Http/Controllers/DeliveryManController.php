@@ -140,4 +140,18 @@ class DeliveryManController extends Controller
         return view('deliveryman.order', ['order' => $order, 'products'=> $products]);
     }
 
+
+    public function deliver($id){
+        DB::table('orders')
+        ->where('order_id', $id)
+        ->update(
+            [
+                'order_status' => 'completed'
+            ]
+        );
+        return redirect()->route('deliveryman.index');
+
+    }
+
+
 }
