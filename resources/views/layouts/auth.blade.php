@@ -83,7 +83,7 @@
         </main>
     </div>
      <!-- Footer -->
-  <footer class="footer py-5 bg-dark">
+  <footer class="footer py-3 bg-dark">
     <div class="container">
       <p class="m-0 text-center text-white">Copyright &copy; Bhaibhai store 2020</p>
     </div>

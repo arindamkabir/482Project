@@ -22,7 +22,14 @@ class DeliveryManController extends Controller
         ->where('order_status', 'paid')
         ->get();
 
-        return view('deliveryman.home', ['orders_pending' => $orders_pending]);
+        $orders_completed =  DB::table('orders')               
+        ->join('users', 'orders.user_id', '=', 'users.id')
+        ->join('customers', 'customers.user_id', '=', 'users.id')
+        ->select('orders.order_id', 'orders.user_id', 'customers.location', 'customers.address', 'customers.customer_id', 'orders.total', 'orders.order_status')
+        ->where('order_status', 'completed')
+        ->get();
+
+        return view('deliveryman.home', ['orders_pending' => $orders_pending, 'orders_completed' => $orders_completed]);
     }
 
     /**
@@ -141,7 +148,8 @@ class DeliveryManController extends Controller
     }
 
 
-    public function deliver($id){
+    public function deliver(Request $request){
+        $id = $request->order_id;
         DB::table('orders')
         ->where('order_id', $id)
         ->update(

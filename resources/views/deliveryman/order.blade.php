@@ -52,8 +52,10 @@
 
 
                 <div class="d-flex flex-row justify-content-center my-4">	
-                    <form action="{{route('deliveryman.deliver', $order->order_id)}}" class="align-self-end mx-2" method="PUT">
+                    <form action="{{route('deliveryman.deliver')}}" class="align-self-end mx-2" method="POST">
                     @csrf
+                        <input type="hidden" id="order_id" name="order_id" value="{{$order->order_id}}">
+
                         <button type="submit" class="btn btn-sm btn-primary">Deliver</button>
                     </form>
 			    </div>

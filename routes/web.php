@@ -40,7 +40,7 @@ Route::get('/shopowner/products/{product}', 'ShopOwnerController@productdestroy'
 Route::resource('product', 'ProductController');
 Route::resource('deliveryman', 'DeliveryManController');
 Route::get('/deliveryman/show_order/{order}', 'DeliveryManController@show_order')->name('deliveryman.show_order');
-Route::put('/deliveryman/deliver/', 'DeliveryManController@deliver')->name('deliveryman.deliver');
+Route::post('/deliveryman/deliver', 'DeliveryManController@deliver')->name('deliveryman.deliver');
 
 
 Route::get('/admin', 'AdminController@index')->name('admin.dashboard');
