@@ -36,7 +36,7 @@ class CustomerController extends Controller
     public function store(Request $request)
     {
         DB::table('users')->insert([
-            "name" => $request->customer_name,
+            "name" => $request->name,
             "email" => $request->email,
             "password" => Hash::make($request->password),
             "contact" => $request->contact,
@@ -54,7 +54,7 @@ class CustomerController extends Controller
             'created_at' => date('Y-m-d H:i:s')
         ]);
 
-        return redirect()->route('admin.customers');
+        
 
     }
 
