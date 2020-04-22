@@ -7,9 +7,6 @@
         <div class="">
             <h3><strong>DeliveryMan</strong></h3>
         </div>
-        <div class="ml-auto">
-            <button type="submit" class="btn btn-outline-dark">History</button>  
-        </div>
     </div>
 
 
