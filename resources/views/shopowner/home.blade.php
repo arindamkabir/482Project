@@ -19,7 +19,7 @@
             <a href="#"><img class="card-img-top" src="{{asset('images/' .  $product->image)}}" alt="" width="100%" height="100%"></a>
             <div class="card-body">
                 <h4 class="card-title">
-                <a href="{{route('product.show',$product->product_id)}}">{{$product->name}}</a>
+                {{$product->name}}
                 </h4>
                 <h5>${{$product->price}}</h5>
                 <p class="card-text">{{$product->description}}</p>
