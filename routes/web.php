@@ -68,5 +68,10 @@ Route::get('/cartempty','CartController@empty')->name('cart.empty');
 
 // Route::post('/admin/appointments', 'AppointmentController@approve')->name('appointment.approve')->middleware('isAdmin');
 Auth::routes();
+Route::get('/login', function () {
+
+    return view('auth.login');
+
+})->name('login');
 
 Route::get('/home', 'HomeController@index')->name('home');

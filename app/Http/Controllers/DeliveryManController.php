@@ -61,6 +61,8 @@ class DeliveryManController extends Controller
             'created_at' => date('Y-m-d H:i:s')
         ]);
 
+        return redirect()->route('login')->with('success', 'Registration Successful. Please Log In.');
+
     }
 
     /**
