@@ -16,6 +16,21 @@ Auth::routes();
 Route::get('/', 'HomeController@index')->name('home')->middleware('home');;
 Route::any('/search', 'ProductController@search')->name('search');
 
+Route::get('/register/customer', function () {
+
+    return view('auth.registercustomer');
+
+})->name('cus_reg');
+Route::get('/register/shop', function () {
+
+    return view('auth.registershop');
+
+})->name('shp_reg');
+Route::get('/register/deliveryman', function () {
+
+    return view('auth.registerdelivery');
+
+})->name('deli_reg');
 Route::resource('customer', 'CustomerController');
 Route::resource('shopowner', 'ShopOwnerController')->middleware('shopowner');
 Route::get('/shopowner/products/create', 'ShopOwnerController@productcreate')->name('shopowner.pcreate')->middleware('shopowner');

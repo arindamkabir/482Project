@@ -2,8 +2,9 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+<h2 class="text-center mt-5">Register As...</h3>
+    <div class="row justify-content-center mt-5">
+        <!-- <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Register') }}</div>
 
@@ -71,7 +72,14 @@
                     </form>
                 </div>
             </div>
-        </div>
+        </div> -->
+
+
+        
+            <a href="{{route('cus_reg')}}" type="button" class="cus-btn">Customer</a>
+            <a href="{{route('shp_reg')}}" type="button" class="shp-btn">Shop</a>
+            <a href="{{route('deli_reg')}}" type="button" class="deli-btn">Delivery Man</a>
+
     </div>
 </div>
 @endsection
