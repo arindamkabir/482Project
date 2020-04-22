@@ -42,7 +42,7 @@ class ShopOwnerController extends Controller
 
 
         DB::table('users')->insert([
-            "name" => $request->owner_name,
+            "name" => $request->name,
             "email" => $request->email,
             "password" => Hash::make($request->password),
             "contact" => $request->contact,
@@ -59,7 +59,6 @@ class ShopOwnerController extends Controller
             'created_at' => date('Y-m-d H:i:s')
         ]);
 
-        return redirect()->route('admin.shopowners');
 
     }
 

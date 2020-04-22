@@ -44,7 +44,7 @@ class DeliveryManController extends Controller
     public function store(Request $request)
     {
         DB::table('users')->insert([
-            "name" => $request->dman_name,
+            "name" => $request->name,
             "email" => $request->email,
             "password" => Hash::make($request->password),
             "contact" => $request->contact,
@@ -60,8 +60,6 @@ class DeliveryManController extends Controller
             "user_id" => $id,
             'created_at' => date('Y-m-d H:i:s')
         ]);
-
-        return redirect()->route('admin.deliverymen');
 
     }
 

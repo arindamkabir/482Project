@@ -32,7 +32,7 @@ Route::get('/register/deliveryman', function () {
 
 })->name('deli_reg');
 Route::resource('customer', 'CustomerController');
-Route::resource('shopowner', 'ShopOwnerController')->middleware('shopowner');
+Route::resource('shopowner', 'ShopOwnerController');
 Route::get('/shopowner/products/create', 'ShopOwnerController@productcreate')->name('shopowner.pcreate')->middleware('shopowner');
 Route::post('/shopowner/products/', 'ShopOwnerController@productstore')->name('shopowner.pstore')->middleware('shopowner');
 Route::get('/shopowner/products/{product}/edit', 'ShopOwnerController@productedit')->name('shopowner.pedit')->middleware('shopowner');
