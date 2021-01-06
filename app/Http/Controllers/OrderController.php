@@ -41,7 +41,8 @@ class OrderController extends Controller
             [ 
                 'user_id' => \Auth::id(),
                 'total' => Cart::total(),
-                'created_at' => date('Y-m-d H:i:s')
+                'created_at' => date('Y-m-d H:i:s'),
+                'order_status' => 'pending'
             ]
         );
 
@@ -57,12 +58,12 @@ class OrderController extends Controller
         }; 
 
         $total = Cart::total();
-        $order_id = $id;
+        $invoice = $id;
 
         Cart::destroy();
 
 
-        return view('cart.checkout');
+        return view('cart.checkout', ['amount' => $total, 'invoice' => $invoice]);
     }
 
 

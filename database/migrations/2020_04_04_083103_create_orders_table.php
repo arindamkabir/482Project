@@ -17,7 +17,8 @@ class CreateOrdersTable extends Migration
             $table->bigIncrements('order_id');
             $table->unsignedInteger('user_id');
             $table->string('total');
-            $table->string('order_status')->default('paid');
+            $table->string('order_status');
+            $table->string('trxID')->nullable();
             $table->timestamps();
 
 

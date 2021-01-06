@@ -64,7 +64,10 @@ Route::get('/cart','CartController@index')->name('cart.index');
 Route::get('/cartempty','CartController@empty')->name('cart.empty');
 
 // Route::get('/admin/doctors','AdminController@doctors')->name('admin.doctors')->middleware('isAdmin');
-
+Route::post('token', 'PaymentController@token')->name('token');
+Route::get('blah', 'PaymentController@_bkash_Get_Token')->name('dsd');
+Route::get('createpayment', 'PaymentController@createpayment')->name('createpayment');
+Route::get('executepayment', 'PaymentController@executepayment')->name('executepayment');
 
 // Route::post('/admin/appointments', 'AppointmentController@approve')->name('appointment.approve')->middleware('isAdmin');
 Auth::routes();
