@@ -30,7 +30,7 @@ class PaymentController extends Controller
         echo $idtoken;
     }
 
-    public function _bkash_Get_Token()
+    protected function _bkash_Get_Token()
     {
         /*$strJsonFileContents = file_get_contents("config.json");
         $array = json_decode($strJsonFileContents, true);*/
@@ -58,7 +58,7 @@ class PaymentController extends Controller
         //curl_setopt($url, CURLOPT_PROXY, $proxy);
         $resultdata = curl_exec($url);
         curl_close($url);
-        dd(json_decode($resultdata, true));
+        return json_decode($resultdata, true);
     }
 
     protected function _get_config_file()
